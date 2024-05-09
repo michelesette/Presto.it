@@ -7,9 +7,11 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+          @guest
           <a class="nav-link" href="{{route('login')}}">Accedi</a>
           <a class="nav-link" href="{{route('register')}}">Registrati</a>
-          <a class="nav-link" href="#">Logout</a>
+          @endguest
+          <a class="nav-link" href="{{route('logout')}}">Logout</a>
         </div>
       </div>
     </div>
