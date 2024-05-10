@@ -8,24 +8,34 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
           @guest
-          <a class="nav-link" href="{{route('login')}}">Accedi</a>
+        </li>
+        <a class="nav-link" href="{{route('login')}}">Accedi</a>
+        <li>
+          </li>
           <a class="nav-link" href="{{route('register')}}">Registrati</a>
+          <li>
           @endguest
           @auth
-          <li class="nav-item">
-           <a class="nav-link" href="#">Ciao {{Auth::user()->name}}</a>
-         </li>
-           <li class="nav-item">
-             <form          
-             action="{{route('logout')}}" 
-             method="POST">
-             @csrf
-             <button
-             class="nav-link"
-             type="submit">Logout</button>      
-             </form>
-           </li>
-           @endauth
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ciao {{Auth::user()->name}}
+            </a>
+            <ul class="dropdown-menu">
+             
+              <li>
+                <a class="nav-item nav-link" href="{{route('article.create')}}">inserisci articolo</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="nav-item">
+                <form action="{{route('logout')}}"  method="POST">
+                @csrf
+              <button class="nav-link dropdown-item "type="submit">Logout</button>      
+                </form>
+              </li>
+            </ul>
+          </li>    
+          @endauth
         </div>
       </div>
     </div>

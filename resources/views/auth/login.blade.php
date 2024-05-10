@@ -14,6 +14,8 @@
       </div>
   </header>
 
+  <x-display-errors/>
+  <x-display-message/> 
 
   <div class="container-fluid mt-5 form-log1 py-5 ">
     <div class="row justify-content-center align-content-center h-100 ">
@@ -30,7 +32,7 @@
                     
                         <div class="mb-3 col-12 col-md-6 ">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <input type="email" name="email"  value="{{old('email')}}" class="form-control" id="email" aria-describedby="emailHelp">
                         </div>
                           
                         <div class="mb-3 col-12 col-md-6">
@@ -40,6 +42,7 @@
 
                         <div class="col-12 d-flex justify-content-center">
                             <button type="submit" class="btn mybtn mt-3 ">Accedi</button>
+                            <p class="small mt-2 ">Non sei registrato?<a href="{{route('register')}}">Clicca qui</a></p>
                         </div>
                 </div>
             </div>
@@ -51,7 +54,7 @@
 
 
 
-{{-- <x-display-error/> --}}
+ 
 
 
 </x-layout>

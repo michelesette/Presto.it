@@ -11,6 +11,9 @@
   </header>
 
 
+  <x-display-errors/> 
+  <x-display-message/> 
+
   <div class="container-fluid mt-5 py-5">
     <div class="row justify-content-center align-content-center h-100 ">
         <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -24,7 +27,7 @@
                 <div class="row"> 
                   <div class="mb-3 col-12 col-md-6">
                     <label for="name" class="form-label">Nome</label>
-                    <input type="text" name="name" class="form-control" id="name">
+                    <input type="text" name="name" class="form-control" id="name" value="{{old('name')}}">
                   </div>
                   {{-- <div class="mb-3 col-12 col-md-6">
                     <label for="surname" class="form-label">Cognome</label>
@@ -33,7 +36,7 @@
 
                     <div class="mb-3 col-12 col-md-6">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" value="{{old('email')}}">
                     </div>
                       {{-- <div class="mb-3 col-12 col-md-6">
                         <label for="telephone" class="form-label">Telefono</label>
@@ -51,6 +54,7 @@
                    
                     <div class="mb-3 col-12 d-flex justify-content-center">
                       <button type="submit" class="btn mybtn mt-3 ">Registrati</button>
+                      <p class="small mt-2 ">Già registrato?<a href="{{route('login')}}">Clicca qui</a></p>
                     </div>
                   </form>
         </div>
@@ -59,7 +63,7 @@
 
 
 
-{{-- <x-display-error/> --}}
+ 
 
 
 </x-layout>
