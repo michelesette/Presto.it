@@ -1,48 +1,74 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dream Team</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-        </li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-          <li>
-            
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('article.index')}}">I miei articoli</a>
-          </li>
-          @guest
+<nav class="navbar navbar-expand-lg bg-body-secondary  shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex justify-content-center" href="{{route('homepage')}}">
+      <img src="/media/icons8-hotel-96.png" class="w-50" alt="" >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item px-3 ">
+          <a class="nav-link" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house"></i> Home</a>
         </li>
-        <a class="nav-link" href="{{route('login')}}">Accedi</a>
+        <li class="nav-item px-3 ">
+          <a class="nav-link" href="{{route('article.index')}}"><i class="fa-solid fa-newspaper"></i> Articoli</a>
+        </li>
+        @guest
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-lock"></i> Area Riservata
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark mt-2 text-center ">
+                <li class="nav-item px-3 ">
+                  <a class="nav-link" href="{{route('register')}}"> <i class="fa-solid fa-right-to-bracket"></i> Registrati</a>
+                </li>
+                <li class="nav-item px-3 ">
+                  <a class="nav-link" href="{{route('login')}}"><i class="fa-solid fa-right-to-bracket"></i> Accedi</a>
+                </li>            
+              </ul>
+            </li>
+          </ul>
+        </div>
+        @endguest
+        @auth
         <li>
-          </li>
-          <a class="nav-link" href="{{route('register')}}">Registrati</a>
-          <li>
-          @endguest
-          @auth
-         
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ciao {{Auth::user()->name}}
-            </a>
-            <ul class="dropdown-menu">
-             
-              <li>
-                <a class="nav-item nav-link" href="{{route('article.create')}}">inserisci articolo</a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li class="nav-item">
-                <form action="{{route('logout')}}"  method="POST">
-                @csrf
-              <button class="nav-link dropdown-item "type="submit">Logout</button>      
-                </form>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-person-circle"></i> {{Auth::user()->name}}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark mt-2 px-2 text-center ">
+                  <li><a class="dropdown-item nav-link px-4 my-3" href=""><i class="fa-solid fa-user-lock"></i> Profilo</a></li>
+                  
+                  @if (Auth::user()->is_admin)
+                  <li><a class="dropdown-item nav-link  my-3" href="{{route('dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li>
+                  @elseif(!Auth::user()->is_lessor)
+                  <li><a class="dropdown-item nav-link  my-3" href="#"><i class="fa-solid fa-hotel"></i> Diventa Locatore</a></li>
+                  @endif
+                  <li>
+                    <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
+                  </li>
+                  @if (Auth::user()->is_lessor)  
+                  <li>
+                    <a class="dropdown-item nav-link  my-3" href="{{route('announcements.create')}}"><i class="bi bi-plus-lg"></i>Annuncio</a>
+                  </li>
+                  @endif
+                  <li>   
+                    <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
+                      @csrf
+                      <button type="submit" class="btn btn-danger text-center mb-2 ">Logout<i class="bi bi-box-arrow-right px-2"></i></button>
+                    </form>
+                  </li>
+                </ul>
               </li>
             </ul>
-          </li>    
-          @endauth
-        </div>
-      </div>
+          </div>
+        </li>
+        @endauth
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

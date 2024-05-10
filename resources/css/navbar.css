@@ -1,0 +1,25 @@
+.navbar {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.nav-link{
+    position: relative;
+    
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:0%;
+    height: 3px;
+    background:#F6AE2D ;
+    transition: .5s;
+}
+
+.nav-link:hover:before{
+  width: 100%;
+}
+

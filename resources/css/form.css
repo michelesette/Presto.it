@@ -1,0 +1,25 @@
+.header{
+  font-family: "BioRhyme Expanded", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.mybtn{
+  background-color: #105a7a;
+}
+
+.newArt{
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.articleCont{
+  backdrop-filter: blur(2000px);
+  background-position: center;
+  background-size: contain;
+  height: 50vh;
+}
+.articleCont h1{
+  color: black;
+}

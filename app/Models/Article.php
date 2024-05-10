@@ -2,28 +2,24 @@
 
 namespace App\Models;
 
-use App\Models\User;
-use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
     use HasFactory;
-    protected $fillable=[
+    protected $fillable = [
+
         'title',
         'subtitle',
         'body',
         'img',
-        'user_id',
-        'category_id'
+        
     ];
-    public function user()
+
+    public function tags()
     {
-        return $this->belongsTo(User::class);
-    }
-    public function categories()
-    {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Tag::class);
     }
 }

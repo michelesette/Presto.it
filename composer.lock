@@ -4,8 +4,99 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e070cac2c89b75ab1137c5a1d80b88a6",
+    "content-hash": "c17f9335f11d60bc54a8b2aed07e22f4",
     "packages": [
+        {
+            "name": "automad/bootstrap-icons",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marcantondahmen/automad-bootstrap-icons.git",
+                "reference": "f8f9131667e956398d679feee0a90a2b099e3bc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marcantondahmen/automad-bootstrap-icons/zipball/f8f9131667e956398d679feee0a90a2b099e3bc5",
+                "reference": "f8f9131667e956398d679feee0a90a2b099e3bc5",
+                "shasum": ""
+            },
+            "require": {
+                "automad/package-installer": "^1.1 || dev-master"
+            },
+            "type": "automad-package",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Anton Dahmen",
+                    "homepage": "https://marcdahmen.de"
+                }
+            ],
+            "description": "This package let's you easily embed Bootstrap icons within your Automad templates",
+            "keywords": [
+                "extension",
+                "icons"
+            ],
+            "support": {
+                "issues": "https://github.com/marcantondahmen/automad-bootstrap-icons/issues",
+                "source": "https://github.com/marcantondahmen/automad-bootstrap-icons/tree/1.2.2"
+            },
+            "time": "2020-12-26T11:35:57+00:00"
+        },
+        {
+            "name": "automad/package-installer",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/automadcms/automad-composer-package-installer.git",
+                "reference": "6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/automadcms/automad-composer-package-installer/zipball/6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b",
+                "reference": "6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0||^2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Automad\\Composer\\PackageInstallerPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Automad\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Anton Dahmen",
+                    "homepage": "https://marcdahmen.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A custom composer installer for Automad packages",
+            "support": {
+                "issues": "https://github.com/automadcms/automad-composer-package-installer/issues",
+                "source": "https://github.com/automadcms/automad-composer-package-installer/tree/1.1.2"
+            },
+            "time": "2020-10-25T21:22:20+00:00"
+        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "v3.0.0",

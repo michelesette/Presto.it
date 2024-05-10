@@ -1,48 +1,34 @@
-<x-layout>
+<x-layout title="Lista Articoli">
+  <header class="header pt-5 articleCont">
+      <div class="container-fluid">
+          <div class="row justify-content-center align-content-center h-100 ">
+              <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                  <h1 class="text-center text-bg-light p-2">Lista Articoli</h1>
+              </div>
+          </div>
+      </div>
+  </header>
 
+  {{-- Snippet per feedback positivo --}}
+  <x-display-message/>
 
-   
-    <x-masthead title="I miei articoli"></x-masthead>
+  {{-- Snippet per verificare errori --}}
+ <x-display-error/>
 
-
-    <x-display-message/>
-
-
-    
-
-    <div class="container">
-        <div class="row my-5 ">
-            @foreach ($articles as $article )  
-            <div class="col-12 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src={{Storage::url($article->img)}} class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">{{$article->title}}</h5>
-                      <p class="card-subtitle ">{{$article->subtitle}}</p>
-                      <p class="card-text">{{$article->body}}</p>
-                      {{-- @if ($article->categories>isNotEmpty()) --}}
-                      <div class="mb-2">
-                        {{-- @foreach ($article->categories as $category) --}}
-                        {{-- <span class="badge bg-info-subtle ">#{{$categories->name}}</span> --}}
-                        {{-- @endforeach --}}
-                      </div>
-                      {{-- @endif --}}
-                      <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettaglio articolo</a>
-                      @auth
-                      <a href="{{route('article.edit', compact('article'))}}" class="btn btn-success my-3 ">Modifica articolo</a>
-                      <form 
-                      action="{{route('article.destroy', compact('article'))}}"
-                      method="POST">
-                      @method('DELETE')
-                      @csrf
-                   <button class="btn btn-danger" type="submit" >Elimina articolo</button>
-                    </form>  
-                      @endauth
-                    </div>
-                  </div>
+  <div class="container mt-5 newArt">
+      <div class="row mt-5 justify-content-center my-5">
+        <div class="container">
+            <div class="row">
+                {{-- @dd($products) --}}
+                @foreach($articles as $article)
+                <div class="col-12 col-md-4">
+                    <x-card-article
+                  :article=$article
+                  />
+                </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
-    </div>
-
+      </div>
+  </div>
 </x-layout>

@@ -1,41 +1,79 @@
-<x-layout>
+<x-layout title="Crea Articolo">
 
-<x-masthead/>
-    <x-display-errors/>
-    <x-display-message/> 
+  
 
-    <div class="container py-5">
-        <div class="row justify-content-center ">
-            <div class="col-12 col-md-6">
-                <form class=" bg-secondary-subtle p-4 rounded-3" enctype="multipart/form-data" method="POST" action="{{route('article.store')}}">
+    <header class="header pt-5 articleCont">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-content-center h-100 ">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+
+                    <h1 class="text-center text-bg-light p-2 mt-5">NUOVO ARTICOLO</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    {{-- Snippet per feedback positivo --}}
+
+    <x-display-message/>
+
+    {{-- Snippet per verificare errori --}}
+
+   <x-display-error/>
+
+    <div class="container  newArt">
+        <div class="row mt-5 justify-content-center my-5">
+            <div class="col-12 col-md-6 justify-content-center ">
+                <form class="rounded-4 shadow bg-secondary-subtle  p-3" action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
+
+                    {{--! enctype serve per inserire file nel form --}}
+                    
                     @csrf
                     <div class="mb-3">
-                      <label for="title" class="form-label">Titolo Articolo:</label>
-                      <input type="text" name="title" value="{{old('title')}}" class="form-control" id="title">
+                      <label for="title" class="form-label">Titolo articolo</label>
+                      <input name="title" type="text" class="form-control" id="title" value="{{old('title')}}">
                     </div>
                     <div class="mb-3">
-                        <label for="subtitle" class="form-label">Sottotitolo:</label>
-                        <input type="text" name="subtitle" value="{{old('subtitle')}}" class="form-control" id="subtitle">
-                      </div>
+                      <label for="subtitle" class="form-label">Sottotitolo dell'articolo</label>
+                      <input name="subtitle" class="form-control" id="subtitle" >{{old('subtitle')}}</input>
+                    </div>
+
                     <div class="mb-3">
-                        <label for="body" class="form-label">Descrizione articolo</label>
-                        <textarea class="form-control" value="{{old('body')}}" name="body" id="body" rows="5"></textarea>
-                      </div>
-                        @foreach($categories as $category)
-                        <div class="form-check">
-                          <input class="form-check-input" name="categories[]" type="checkbox" value="{{$category->id}}" id="flexCheckDefault" >
-                          <label class="form-check-label" for="flexCheckDefault">
-                            {{$category->name}}
-                          </label>
+                        <label for="body" class="form-label">Corpo dell'articolo</label>
+                        <textarea name="body" class="form-control" id="body" >{{old('body')}}</textarea>
+                    </div>
+                    
+                      <div class=" container mb-3">
+
+                        <div class="row">
+                            
+                            @foreach ($tags as $tag )
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="{{$tag->id}}" id="flexCheckDefault" name="tags[]">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        {{$tag->name}}
+                                        </label>
+                                    </div>
+                                </div>
+                            @endforeach
+                            
                         </div>
-                      @endforeach
-                      <div class="mb-3">
-                        <label for="img" class="form-label">Inserisci un'immagine</label>
-                        <input class="form-control"  name="img" type="file" id="img">
                       </div>
-                    <button type="submit" class="btn btn-primary">Carica articolo</button>
+                    
+                    <div class="mb-3 ">
+                        <label for="img" class="form-label">Inserisci immagina</label>
+                        <div class="d-flex ">
+                            <input name="img" type="file" class="form-control d-flex me-3" id="img" value="{{old('img')}}">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn mybtn mt-3">Crea articolo</button>
                   </form>
             </div>
         </div>
-      </div>
+    </div>
+  
 </x-layout>

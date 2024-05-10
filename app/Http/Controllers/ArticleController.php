@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Article;
-use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -22,31 +21,38 @@ class ArticleController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        $categories = Category::all();
-
-        return view('article.create',compact('categories'));
+    {  
+         //recupero tutti i tags
+       $tags = Tag::all();
+        return view('article.create', compact('tags'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $article =  Article::create([
-                
-            'title'=>$request->title,
-            'subtitle'=>$request-> subtitle,
-            'body'=>$request->body
-         ]);
-         if($request->file('img')){
-          $article->img = $request->file('img')->store('public/img');
-          $article->save();
-         }
+    {   
+        // dd($request->all());
 
-        // $article->categories()->attach($request->categories);
+        $article = Article::create([
 
-        return redirect()->back()->with('message','articolo inserito con successo');
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body'=> $request->body
+
+        ]);
+
+        if($request->file('img')){
+
+            $article->img=$request->file('img')->store('public/img');
+            $article->save();
+        }
+
+        $article
+        ->tags() // MANY TO MANY def nel modello, compio questa operazione quando devo scrivere nel database
+        ->attach($request->tags); // Gli passo gli ID del megli oggetti che voglio mettere in relazione al modello di partenza
+
+        return redirect()->back()->with('message', 'Articolo creato correttamente');
     }
 
     /**
@@ -54,16 +60,17 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        return view('article.show',compact('article'));
+        return view('article.show', compact('article'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Article $article)
-    {
-        $categories = Category::all();
-        return view('article.edit', compact('article','categories'));
+    {   
+         $tags = Tag::all();
+
+        return view('article.edit', compact('article', 'tags'));
     }
 
     /**
@@ -71,23 +78,27 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        if ($request->file('img')) {
-            $img = $request->file('img') ->store('public/img');
-        }
-        else{
-            $img = $article->img;
-        }
+        if($request->file('img')){
 
-        $article->update([
-            'title' => $request->title,
-            'subtitle' => $request->subtitle,
-            'body' => $request->body,
-            'img' => $img
-        ]);
+            $img= $request->file('img')
+                 ->store('public/img');
 
-        // dd($article);
+         } else {
 
-        return redirect(route('article.index'))->with('message', 'articolo modificato');
+             $img = $article->img;
+         }
+
+
+         $article->update([
+             'title' => $request->title,
+             'subtitle' => $request->subtitle,
+             'body' => $request->body,
+             'img'=> $img
+         ]);
+
+         $article->tags()->sync($request->tags); //sincronizza l'attuale relazione aggiornata tra i tag selezionati e quelli deselezionati
+         
+         return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
     }
 
     /**
@@ -95,8 +106,9 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+        $article->tags()->detach();
         $article->delete();
 
-        return redirect()->back()->with('message', 'articolo eliminato');
+        return redirect(route('article.index'))->with('message', 'Articolo eliminato con successo!');
     }
 }
