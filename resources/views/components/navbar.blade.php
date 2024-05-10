@@ -6,7 +6,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+        </li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+          <li>
+            
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('article.index')}}">I miei articoli</a>
+          </li>
           @guest
         </li>
         <a class="nav-link" href="{{route('login')}}">Accedi</a>

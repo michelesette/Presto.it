@@ -21,6 +21,14 @@
                         <label for="body" class="form-label">Descrizione articolo</label>
                         <textarea class="form-control" value="{{old('body')}}" name="body" id="body" rows="5"></textarea>
                       </div>
+                        @foreach($categories as $category)
+                        <div class="form-check">
+                          <input class="form-check-input" name="categories[]" type="checkbox" value="{{$category->id}}" id="flexCheckDefault" >
+                          <label class="form-check-label" for="flexCheckDefault">
+                            {{$category->name}}
+                          </label>
+                        </div>
+                      @endforeach
                       <div class="mb-3">
                         <label for="img" class="form-label">Inserisci un'immagine</label>
                         <input class="form-control"  name="img" type="file" id="img">
@@ -30,5 +38,4 @@
             </div>
         </div>
       </div>
-
 </x-layout>
