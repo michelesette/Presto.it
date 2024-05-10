@@ -22,4 +22,14 @@ class Article extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class);
+    }
 }

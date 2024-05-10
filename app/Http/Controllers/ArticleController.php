@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -34,13 +35,13 @@ class ArticleController extends Controller
     {   
         // dd($request->all());
 
-        $article = Article::create([
-
+        $articles = Auth::user()->articles()->create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
-            'body'=> $request->body
-
+            'body'=> $request->body,
         ]);
+
+        $articles->tags()->attach($request->tags);
 
         if($request->file('img')){
 
@@ -48,7 +49,7 @@ class ArticleController extends Controller
             $article->save();
         }
 
-        $article
+        $articles
         ->tags() // MANY TO MANY def nel modello, compio questa operazione quando devo scrivere nel database
         ->attach($request->tags); // Gli passo gli ID del megli oggetti che voglio mettere in relazione al modello di partenza
 

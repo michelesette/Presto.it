@@ -19,7 +19,6 @@
       <div class="row mt-5 justify-content-center my-5">
         <div class="container">
             <div class="row">
-                {{-- @dd($products) --}}
                 @foreach($articles as $article)
                 <div class="col-12 col-md-4">
                     <x-card-article

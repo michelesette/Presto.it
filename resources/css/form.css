@@ -18,7 +18,7 @@
   backdrop-filter: blur(2000px);
   background-position: center;
   background-size: contain;
-  height: 50vh;
+  height: 20vh;
 }
 .articleCont h1{
   color: black;
