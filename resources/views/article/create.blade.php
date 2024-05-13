@@ -17,7 +17,7 @@
 
     {{-- Snippet per verificare errori --}}
 
-   <x-display-error/>
+   <x-display-errors/>
 
     <div class="container  newArt">
         <div class="row mt-5 justify-content-center my-5">
@@ -35,7 +35,7 @@
                       <label for="subtitle" class="form-label">Sottotitolo dell'articolo</label>
                       <input name="subtitle" class="form-control" id="subtitle" >{{old('subtitle')}}</input>
                     </div>
-
+                      
                     <div class="mb-3">
                         <label for="body" class="form-label">Corpo dell'articolo</label>
                         <textarea name="body" class="form-control" id="body" >{{old('body')}}</textarea>
@@ -46,7 +46,7 @@
                         <div class="row">
                              <div class="col-4">
                                 <select name="category_id" class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                                <option selected>Seleziona categoria</option>
                                 @foreach ($categories as $category )
                                  <option value="{{$category->id}}">{{$category->name}}</option>
 

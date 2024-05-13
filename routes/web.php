@@ -34,3 +34,8 @@ Route::delete('/article/destroy/{article}',[ArticleController::class, 'destroy']
 
 Route::get('/article/category/{category}',[ArticleController::class, 'byCategory'])
 ->name('article.byCategory')->middleware('auth');
+
+//rotta filtro redattore
+
+Route::get('/article/user/{user}',[ArticleController::class, 'byUser'])
+->name('article.byUser')->middleware('auth');

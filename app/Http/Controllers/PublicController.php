@@ -15,14 +15,4 @@ class PublicController extends Controller
         return view('welcome', compact('articles'));
     }
 
-    public function becomeLessor(){
-
-        return view('become-lessor');
-    }
-
-    public function becomeLessorSubmit(Request $request){
-
-    //    dd($request->all());
-
-}
 }

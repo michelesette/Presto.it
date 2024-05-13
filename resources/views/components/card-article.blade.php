@@ -7,6 +7,11 @@
       <a href="{{route('article.show', compact('article'))}}"><button  class="btn mybtn mt-3 ">Dettaglio</button></a>
     </div>
     <div class="card-footer text-muted d-flex justify-content-center align-items-center">
-      Articolo creato il {{$article->created_at->format('d/m/Y')}}  da {{$article->user->name}}
+      Articolo creato il {{$article->created_at->format('d/m/Y')}} 
+     <div>
+      <p>Scrittore: <a href="{{route('article.byUser', ['user'=>$article->user->id])}}">
+        {{$article->user->name}}</a></p> 
+      </div>
+      
     </div>
   </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,6 +26,11 @@ class ArticleController extends Controller
         return view('article.byCategory', compact('category','articles'));
     }
 
+    public function byUser(User $user)
+    {
+        $articles = $user->articles()->orderBy('created_at', 'desc')->get();
+        return view('article.byUser', compact('user','articles'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -42,7 +48,7 @@ class ArticleController extends Controller
     {
         // dd($request->all());
 
-        $article = Auth::user()->articles()->create([
+        $article= Auth::user()->articles()->create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body'=> $request->body,
@@ -54,6 +60,7 @@ class ArticleController extends Controller
 
             $article->img=$request->file('img')->store('public/img');
             $article->save();
+            
         }
 
         return redirect()->back()->with('message', 'Articolo creato correttamente');
@@ -113,3 +120,5 @@ class ArticleController extends Controller
         return redirect(route('article.index'))->with('message', 'Articolo eliminato con successo!');
     }
 }
+
+
