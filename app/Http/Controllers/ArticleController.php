@@ -21,8 +21,8 @@ class ArticleController extends Controller
 
         public function byCategory(Category $category)
     {
-        $article = $category->articles()->orderBy('created_at', 'desc')->get();
-        return view('article.byCategory', compact('category'));
+        $articles = $category->articles()->orderBy('created_at', 'desc')->get();
+        return view('article.byCategory', compact('category','articles'));
     }
 
     /**
@@ -99,9 +99,7 @@ class ArticleController extends Controller
              'body' => $request->body,
              'img'=> $img
          ]);
-
-         $article->category()->sync($request->categories); //sincronizza l'attuale relazione aggiornata tra i tag selezionati e quelli deselezionati
-
+        //  $article->category()->sync([$request->categories]);
          return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
     }
 

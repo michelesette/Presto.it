@@ -49,13 +49,13 @@
           </div>
           <div class=" container mb-3">
             <div class="row">
-              @foreach ($tags as $tag )
+              @foreach ($categories as $category)
               <div class="col-4">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="{{$tag->id}}" id="flexCheckDefault" name="tags[]" 
-                  @if($article->tags->contains($tag)) checked @endif>
+                  <input class="form-check-input" type="checkbox" value="{{$category->id}}" id="flexCheckDefault" name="categories[]"/>
+                  {{-- @if($article->categories->contains($category)) checked @endif> --}}
                   <label class="form-check-label" for="flexCheckDefault">
-                    {{$tag->name}}
+                    {{$category->name}}
                   </label>
                 </div>
               </div>
