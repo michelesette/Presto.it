@@ -1,7 +1,7 @@
 .hero{
-    height: 95vh;
-    background-image: url('../img/hero.jpeg');
-    background-position: center;
+    height: 20vh;
+    background-image: url('');
+    background-position: top;
     background-size: cover;
     font-family: "BioRhyme Expanded", serif;
     font-weight: 800;
@@ -9,5 +9,5 @@
 }
 
 .colHome{
-    height: 90vh;
+    height: 30vh;
 }
