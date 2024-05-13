@@ -38,7 +38,7 @@
                   <i class="bi bi-person-circle"></i> {{Auth::user()->name}}
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark mt-2 px-2 text-center ">
-                  <li><a class="dropdown-item nav-link px-4 my-3" href=""><i class="fa-solid fa-user-lock"></i> Profilo</a></li>
+                  {{-- <li><a class="dropdown-item nav-link px-4 my-3" href=""><i class="fa-solid fa-user-lock"></i> Profilo</a></li> --}}
                   
                   @if (Auth::user()->is_admin)
                   <li><a class="dropdown-item nav-link  my-3" href="{{route('dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li>

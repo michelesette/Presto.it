@@ -1,5 +1,5 @@
 <x-layout title="Crea Articolo">
-    <header class="header pt-5 articleCont">
+    <header class="header articleCont">
         <div class="container-fluid">
             <div class="row justify-content-center align-content-center h-100 ">
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
