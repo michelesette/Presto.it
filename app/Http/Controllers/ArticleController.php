@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,14 +19,20 @@ class ArticleController extends Controller
         return view('article.index', compact('articles'));
     }
 
+        public function byCategory(Category $category)
+    {
+        $article = $category->articles()->orderBy('created_at', 'desc')->get();
+        return view('article.byCategory', compact('category'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
          //recupero tutti i tags
-       $tags = Tag::all();
-        return view('article.create', compact('tags'));
+       $categories = Category::all();
+        return view('article.create', compact('categories'));
     }
 
     /**
@@ -35,24 +42,19 @@ class ArticleController extends Controller
     {
         // dd($request->all());
 
-        $articles = Auth::user()->articles()->create([
+        $article = Auth::user()->articles()->create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body'=> $request->body,
-            'created_at'=> $request->created_at
+            'category_id'=> $request->category_id
         ]);
 
-        $articles->tags()->attach($request->tags);
 
         if($request->file('img')){
 
             $article->img=$request->file('img')->store('public/img');
             $article->save();
         }
-
-        $articles
-        ->tags() // MANY TO MANY def nel modello, compio questa operazione quando devo scrivere nel database
-        ->attach($request->tags); // Gli passo gli ID del megli oggetti che voglio mettere in relazione al modello di partenza
 
         return redirect()->back()->with('message', 'Articolo creato correttamente');
     }

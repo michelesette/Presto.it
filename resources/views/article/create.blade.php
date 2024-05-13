@@ -1,6 +1,6 @@
 <x-layout title="Crea Articolo">
 
-  
+
 
     <header class="header pt-5 articleCont">
         <div class="container-fluid">
@@ -8,7 +8,7 @@
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
 
                     <h1 class="text-center text-bg-light p-2 mt-5">NUOVO ARTICOLO</h1>
-                    
+
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <form class="rounded-4 shadow bg-secondary-subtle  p-3" action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
 
                     {{--! enctype serve per inserire file nel form --}}
-                    
+
                     @csrf
                     <div class="mb-3">
                       <label for="title" class="form-label">Titolo articolo</label>
@@ -44,25 +44,25 @@
                         <label for="body" class="form-label">Corpo dell'articolo</label>
                         <textarea name="body" class="form-control" id="body" >{{old('body')}}</textarea>
                     </div>
-                    
+
                       <div class=" container mb-3">
 
                         <div class="row">
-                            
-                            @foreach ($tags as $tag )
-                                <div class="col-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="{{$tag->id}}" id="flexCheckDefault" name="tags[]">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        {{$tag->name}}
-                                        </label>
-                                    </div>
-                                </div>
+                             <div class="col-4">
+                                <select name="category_id" class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                @foreach ($categories as $category )
+                                 <option value="{{$category->id}}">{{$category->name}}</option>
+
+
                             @endforeach
-                            
+
+                            </select>
+                            </div>
+
                         </div>
                       </div>
-                    
+
                     <div class="mb-3 ">
                         <label for="img" class="form-label">Inserisci immagina</label>
                         <div class="d-flex ">
@@ -75,5 +75,5 @@
             </div>
         </div>
     </div>
-  
+
 </x-layout>

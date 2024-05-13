@@ -31,7 +31,7 @@
         @endguest
         @auth
         <li>
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <div class="" id="">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

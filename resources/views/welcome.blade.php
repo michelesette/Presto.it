@@ -22,6 +22,7 @@
                     <x-card-article
 
                         :article="$article"
+
                         />
                 </div>
             @endforeach

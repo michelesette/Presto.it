@@ -12,12 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('articles', function (Blueprint $table) {
-            
+
             $table->id();
             $table->string('title');
             $table->string('subtitle');
             $table->text('body');
             $table->string('img')->default('public/img/default-image.jpg');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

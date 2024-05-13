@@ -15,13 +15,14 @@ class Article extends Model
         'subtitle',
         'body',
         'img',
-        'data'
+        'data',
+        'category_id'
 
     ];
 
-    public function tags()
+    public function category()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function user()

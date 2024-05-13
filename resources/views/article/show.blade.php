@@ -27,19 +27,19 @@
                             <h5 class="card-title p-2">{{$article->subtitle}}</h5>
                             <p class="card-text p-2">{{$article->body}}</p>
 
-                            @if ($article->tags->isNotEmpty())
+                            @if ($article->category)
                             <div>
-                              @foreach ($article->tags as $tag)
-                              
-                              <span class="badge text-bg-primary">#{{$tag->name}}</span>
-                              @endforeach
+
+
+                              <span class="badge text-bg-primary">#{{$article->category->name}}</span>
+
                             </div>
-                                
+
                             @endif
-                            
-      
+
+
                             <a href="{{route('article.edit', compact('article'))}}" class="btn mybtn mt-3 ">Modifica</a>
-      
+
                             <form action="{{route('article.destroy', compact('article'))}}"
                                   method="POST">
                                   @method('DELETE')

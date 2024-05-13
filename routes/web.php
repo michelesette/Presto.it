@@ -30,3 +30,7 @@ Route::put('/article/update/{article}',[ArticleController::class, 'update'])
 
 Route::delete('/article/destroy/{article}',[ArticleController::class, 'destroy'])
 ->name('article.destroy')->middleware('auth');
+//rotta filtro categorie
+
+Route::get('/article/category/{category}',[ArticleController::class, 'byCategory'])
+->name('article.byCategory')->middleware('auth');
