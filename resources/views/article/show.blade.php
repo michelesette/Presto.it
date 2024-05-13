@@ -29,14 +29,9 @@
 
                             @if ($article->category)
                             <div>
-
-
                               <span class="badge text-bg-primary">#{{$article->category->name}}</span>
-
                             </div>
-
                             @endif
-
 
                             <a href="{{route('article.edit', compact('article'))}}" class="btn mybtn mt-3 ">Modifica</a>
 

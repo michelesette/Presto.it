@@ -1,7 +1,4 @@
 <x-layout title="Crea Articolo">
-
-
-
     <header class="header pt-5 articleCont">
         <div class="container-fluid">
             <div class="row justify-content-center align-content-center h-100 ">
@@ -13,7 +10,6 @@
             </div>
         </div>
     </header>
-
 
     {{-- Snippet per feedback positivo --}}
 
@@ -54,26 +50,21 @@
                                 @foreach ($categories as $category )
                                  <option value="{{$category->id}}">{{$category->name}}</option>
 
-
                             @endforeach
 
                             </select>
                             </div>
-
                         </div>
                       </div>
-
                     <div class="mb-3 ">
                         <label for="img" class="form-label">Inserisci immagina</label>
                         <div class="d-flex ">
                             <input name="img" type="file" class="form-control d-flex me-3" id="img" value="{{old('img')}}">
                         </div>
                     </div>
-
                     <button type="submit" class="btn mybtn mt-3">Crea articolo</button>
                   </form>
             </div>
         </div>
     </div>
-
 </x-layout>

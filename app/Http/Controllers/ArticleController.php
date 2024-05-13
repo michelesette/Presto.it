@@ -72,9 +72,9 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-         $tags = Tag::all();
+         $categories = Category::all();
 
-        return view('article.edit', compact('article', 'tags'));
+        return view('article.edit', compact('article', 'categories'));
     }
 
     /**
@@ -100,7 +100,7 @@ class ArticleController extends Controller
              'img'=> $img
          ]);
 
-         $article->tags()->sync($request->tags); //sincronizza l'attuale relazione aggiornata tra i tag selezionati e quelli deselezionati
+         $article->category()->sync($request->categories); //sincronizza l'attuale relazione aggiornata tra i tag selezionati e quelli deselezionati
 
          return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
     }
@@ -110,7 +110,6 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        $article->tags()->detach();
         $article->delete();
 
         return redirect(route('article.index'))->with('message', 'Articolo eliminato con successo!');
