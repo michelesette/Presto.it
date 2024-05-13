@@ -22,7 +22,7 @@
                 @foreach($articles as $article)
                 <div class="col-12 col-md-4">
                     <x-card-article
-                  :article=$article
+                  :article="$article"
                   />
                 </div>
                 @endforeach

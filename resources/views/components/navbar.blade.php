@@ -23,7 +23,7 @@
                 </li>
                 <li class="nav-item px-3 ">
                   <a class="nav-link" href="{{route('login')}}"><i class="fa-solid fa-right-to-bracket"></i> Accedi</a>
-                </li>            
+                </li>
               </ul>
             </li>
           </ul>
@@ -39,7 +39,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark mt-2 px-2 text-center ">
                   <li><a class="dropdown-item nav-link px-4 my-3" href=""><i class="fa-solid fa-user-lock"></i> Profilo</a></li>
-                  
+
                   @if (Auth::user()->is_admin)
                   <li><a class="dropdown-item nav-link  my-3" href="{{route('dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li>
                   @elseif(!Auth::user()->is_lessor)
@@ -48,12 +48,12 @@
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>
-                  @if (Auth::user()->is_lessor)  
+                  @if (Auth::user()->is_lessor)
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('announcements.create')}}"><i class="bi bi-plus-lg"></i>Annuncio</a>
                   </li>
                   @endif
-                  <li>   
+                  <li>
                     <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
                       @csrf
                       <button type="submit" class="btn btn-danger text-center mb-2 ">Logout<i class="bi bi-box-arrow-right px-2"></i></button>

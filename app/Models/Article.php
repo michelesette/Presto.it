@@ -15,7 +15,8 @@ class Article extends Model
         'subtitle',
         'body',
         'img',
-        
+        'data'
+
     ];
 
     public function tags()

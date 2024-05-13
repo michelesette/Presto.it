@@ -22,7 +22,7 @@ class ArticleController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {  
+    {
          //recupero tutti i tags
        $tags = Tag::all();
         return view('article.create', compact('tags'));
@@ -32,13 +32,14 @@ class ArticleController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {   
+    {
         // dd($request->all());
 
         $articles = Auth::user()->articles()->create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body'=> $request->body,
+            'created_at'=> $request->created_at
         ]);
 
         $articles->tags()->attach($request->tags);
@@ -68,7 +69,7 @@ class ArticleController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Article $article)
-    {   
+    {
          $tags = Tag::all();
 
         return view('article.edit', compact('article', 'tags'));
@@ -98,7 +99,7 @@ class ArticleController extends Controller
          ]);
 
          $article->tags()->sync($request->tags); //sincronizza l'attuale relazione aggiornata tra i tag selezionati e quelli deselezionati
-         
+
          return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
     }
 
