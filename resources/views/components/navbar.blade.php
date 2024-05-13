@@ -12,7 +12,7 @@
           <a class="nav-link" href="{{route('article.index')}}"><i class="fa-solid fa-newspaper"></i> Articoli</a>
         </li>
         @guest
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <div>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <button class="btn dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-lock"></i> Area Riservata
@@ -31,7 +31,7 @@
         @endguest
         @auth
         <li>
-          <div class="" id="">
+          <div>
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
