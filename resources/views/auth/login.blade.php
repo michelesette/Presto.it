@@ -38,5 +38,5 @@
         </div>
     </div>
 </div>
-<x-display-error/>
+<x-display-errors/>
 </x-layout>
