@@ -15,7 +15,9 @@
             </div>
         </div>
     </header>
-    <div class="container">
+
+    <!-- sezione articoli recenti -->
+    <section class="container">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
             <div class="col-12 col-md-3">
@@ -27,5 +29,7 @@
             </div>
             @endforeach
         </div>
-    </div>
+    </section>
+
+
 </x-layout>

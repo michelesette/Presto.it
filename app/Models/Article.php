@@ -32,8 +32,4 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
-    // public function articles()
-    // {
-    //     return $this->belongsToMany(Article::class);
-    // }
 }

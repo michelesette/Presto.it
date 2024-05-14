@@ -33,6 +33,7 @@
                             </div>
                             @endif
 
+                            @auth
                             <a href="{{route('article.edit', compact('article'))}}" class="btn mybtn mt-3 ">Modifica</a>
 
                             <form action="{{route('article.destroy', compact('article'))}}"
@@ -41,6 +42,7 @@
                                   @csrf
                                   <button type="submit"  class="btn btn-danger  mt-3 ">Elimina</button>
                             </form>
+                            @endauth
                           </div>
                         </div>
                   </div>

@@ -48,19 +48,18 @@
             </div>
           </div>
           <div class=" container mb-3">
-            <div class="row">
-              @foreach ($categories as $category)
-              <div class="col-4">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="{{$category->id}}" id="flexCheckDefault" name="categories[]"/>
-                  {{-- @if($article->categories->contains($category)) checked @endif> --}}
-                  <label class="form-check-label" for="flexCheckDefault">
-                    {{$category->name}}
-                  </label>
-                </div>
-              </div>
-              @endforeach
-            </div>
+          <div class="row">
+                             <div class="col-4">
+                                <select name="category_id" class="form-select" aria-label="Default select example">
+                                <option selected>Seleziona categoria</option>
+                                
+                                @foreach ($categories as $category )
+                                 <option value="{{$category->id}}">{{$category->name}}</option>
+                               @endforeach
+
+                            </select>
+                            </div>
+                        </div>
           </div>
           <button type="submit" class="btn mybtn mt-3">Salva</button>
         </form>
