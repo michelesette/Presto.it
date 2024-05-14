@@ -37,6 +37,10 @@
                             <div class="mb-3 col-12 d-flex justify-content-center">
                                 <button type="submit" class="btn mybtn mt-3 ">Registrati</button>
                             </div>
+                            <div class="my-3  col-12 d-flex justify-content-center">
+                                <p>se sei già registrato allora accedi subito:</p>
+                                <a href="{{ route('login')}}" class="btn mybtn"> Registrati </a>
+                            </div>
                 </form>
             </div>
         </div>

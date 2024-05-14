@@ -42,7 +42,7 @@ Route::get('/article/user/{user}',[ArticleController::class, 'byUser'])
 
 //lavora con noi
 Route::get('careers',[PublicController::class, 'careers'])
-->name('careers');
+->name('careers')->middleware('auth');
 
 Route::post('careers/submit',[PublicController::class, 'careersSubmit'])
 ->name('careers.submit');

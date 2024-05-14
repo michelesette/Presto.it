@@ -10,7 +10,7 @@
       </div>
   </header>
 
-<div class="container ">
+<div class="container mt-5">
     <div class="row text-center justify-content-center ">
         <div class="col-12 col-md-6">
             <h2>Lavora come amministratore</h2>
