@@ -10,3 +10,7 @@ window.addEventListener("scroll", ()=>{
         navbar.classList.remove("nav-scrolled")
     }
 })
+
+let numUsers = document.querySelector("#numUsers")
+let numArticles = document.querySelector("#numArticles")
+let numComments = document.querySelector("#numComments")

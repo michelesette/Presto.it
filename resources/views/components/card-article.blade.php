@@ -1,4 +1,4 @@
-<div class="card my-5 shadow " style="width: 18rem;">
+<div class="card my-5 shadow ">
     <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="...">
     <div class="card-body">
       <h4 class="card-title">{{$article->title}}</h4>

@@ -1,5 +1,5 @@
 <x-layout title="Accedi">
-  <header class="header pt-5 articleCont">
+  <header class="header pt-5 articleCont mt-5">
     <div class="container-fluid">
       <div class="row justify-content-center align-content-center h-100 ">
         <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -8,7 +8,7 @@
       </div>
     </div>
   </header>
-  <div class="container-fluid mt-5 py-5">
+  <div class="container-fluid mt-5 form-log1 py-3">
     <div class="row justify-content-center align-content-center h-100 ">
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <form 

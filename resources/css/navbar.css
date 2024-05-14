@@ -23,3 +23,14 @@
   width: 100%;
 }
 
+.transition{
+    transition: .9s;
+  }
+
+  .nav-scrolled {
+    margin: 5vh 15vw;
+    background-color: black !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid ;
+    border-radius: 10px;
+  }

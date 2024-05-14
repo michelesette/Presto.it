@@ -1,9 +1,9 @@
 <x-layout title="Lista Articoli">
   <header class="header pt-5 articleCont">
       <div class="container-fluid">
-          <div class="row justify-content-center align-content-center h-100 ">
+          <div class="row justify-content-center align-content-center h-100 mt-5">
               <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                  <h1 class="text-center text-bg-light p-2">Lista Articoli</h1>
+                  <h1 class="text-center p-2">Lista Articoli</h1>
               </div>
           </div>
       </div>
@@ -16,9 +16,9 @@
  <x-display-errors/>
 
   <div class="container mt-5 newArt">
-      <div class="row mt-5 justify-content-center my-5">
+      <div class="row mt-5 justify-content-center">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center p-2 ">
                 @foreach($articles as $article)
                 <div class="col-12 col-md-4">
                     <x-card-article

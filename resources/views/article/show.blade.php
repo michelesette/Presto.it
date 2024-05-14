@@ -1,6 +1,6 @@
 <x-layout title="Articolo - {{$article->title}}">
     <header class="header pt-5 articleCont">
-        <div class="container-fluid">
+        <div class="container-fluid mt-5 p-5 rounded-3">
             <div class="row justify-content-center align-content-center h-100">
                 <div class="col-12 text-bg-light  d-flex justify-content-center align-items-center">
                     <h1 class="text-center">{{$article->title}}</h1>
