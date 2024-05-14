@@ -31,10 +31,10 @@ class ArticleRequest extends FormRequest
 
     public function messages(){
         return [
-            'title.required'=>'Il titolo è obbligatorio, coglione',
-            'subtitle.required'=>'Il sottotitolo è obbligatorio, coglione',
-            'body.required'=>"Il corpo dell'articolo è obbligatorio, coglione",
-            'category.required'=>'La categoria è obbligatoria, coglione'
+            'title.required'=>'Il titolo è obbligatorio.',
+            'subtitle.required'=>'Il sottotitolo è obbligatorio.',
+            'body.required'=>"Il corpo dell'articolo è obbligatorio.",
+            'category.required'=>'La categoria è obbligatoria.'
         ];
     }
 }
