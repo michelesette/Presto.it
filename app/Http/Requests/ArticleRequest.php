@@ -25,7 +25,7 @@ class ArticleRequest extends FormRequest
             'title'=>'required | min:3',
             'subtitle'=>'required',
             'body'=>'required',
-            'category'=>'required'
+            'category_id'=>'required'
         ];
     }
 
@@ -34,7 +34,7 @@ class ArticleRequest extends FormRequest
             'title.required'=>'Il titolo è obbligatorio.',
             'subtitle.required'=>'Il sottotitolo è obbligatorio.',
             'body.required'=>"Il corpo dell'articolo è obbligatorio.",
-            'category.required'=>'La categoria è obbligatoria.'
+            // 'category.required'=>'La categoria è obbligatoria.'
         ];
     }
 }

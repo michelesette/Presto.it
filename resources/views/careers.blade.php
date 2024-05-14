@@ -1,7 +1,7 @@
 
 <x-layout title="Lavora con noi">
   <header class="header pt-5 articleCont">
-      <div class="container-fluid">
+      <div class="container-fluid mt-5 ">
           <div class="row justify-content-center align-content-center h-100 ">
               <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                   <h1 class="text-center text-bg-light p-2">Lavora con noi</h1>
@@ -10,8 +10,8 @@
       </div>
   </header>
 
-<div class="container">
-    <div class="row">
+<div class="container ">
+    <div class="row text-center justify-content-center ">
         <div class="col-12 col-md-6">
             <h2>Lavora come amministratore</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate reprehenderit, numquam voluptas quo delectus placeat vero facilis illum repudiandae, eius atque, explicabo ab quaerat iure dolor quas perspiciatis tenetur?</p>
@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}">
+                <input type="email" name="email" class="form-control text-center " id="email" value="{{old('email') ?? Auth::user()->email}}">
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Parlaci di te</label>
