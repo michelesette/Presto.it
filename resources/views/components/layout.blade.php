@@ -15,5 +15,7 @@
     <x-navbar/>
     {{$slot}}
     <script src="https://kit.fontawesome.com/75eaebdc32.js" crossorigin="anonymous"></script>
+
+    <x-footer/>
 </body>
 </html>
