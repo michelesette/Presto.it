@@ -11,6 +11,9 @@
         <li class="nav-item px-3 ">
           <a class="nav-link" href="{{route('article.index')}}"><i class="fa-solid fa-newspaper"></i> Articoli</a>
         </li>
+        <li class="nav-item px-3 ">
+          <a class="nav-link" href="{{route('careers')}}"><i class="bi bi-pc-display"></i>Lavora con noi</a>
+        </li>
         @guest
         <div>
           <ul class="navbar-nav">
