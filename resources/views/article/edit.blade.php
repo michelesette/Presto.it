@@ -8,21 +8,21 @@
       </div>
     </div>
   </header>
-  
+
   {{-- Snippet per feedback positivo --}}
   <x-display-message/>
-  
+
   {{-- Snippet per verificare errori --}}
-  <x-display-error/>
-  
+   <x-display-errors/>
+
   <div class="container mt-5 newArt">
     <div class="row mt-5 justify-content-center my-5">
       <div class="col-12 col-md-6">
         <form class="rounded-4 shadow bg-secondary-subtle  p-3 mb-5" action="{{route('article.update', compact('article'))}}" method="POST" enctype="multipart/form-data">
-          
+
           {{--! enctype serve per inserire file nel form --}}
-          
-          @method('PUT') 
+
+          @method('PUT')
           @csrf
           <div class="mb-3">
             <label for="title" class="form-label">Titolo articolo</label>
@@ -32,7 +32,7 @@
             <label for="subtitle" class="form-label">Sottotitolo dell'articolo</label>
             <input name="subtitle" class="form-control" id="subtitle" value="{{$article->subtitle}}"></input>
           </div>
-          
+
           <div class="mb-3">
             <label for="body" class="form-label">Corpo dell'articolo</label>
             <textarea name="body" class="form-control" id="body" >{{$article->body}}</textarea>

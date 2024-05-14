@@ -17,7 +17,7 @@
 
     {{-- Snippet per verificare errori --}}
 
-   <x-display-errors/>
+    <x-display-errors/>
 
     <div class="container  newArt">
         <div class="row mt-5 justify-content-center my-5">
@@ -35,7 +35,7 @@
                       <label for="subtitle" class="form-label">Sottotitolo dell'articolo</label>
                       <input name="subtitle" class="form-control" id="subtitle" >{{old('subtitle')}}</input>
                     </div>
-                      
+
                     <div class="mb-3">
                         <label for="body" class="form-label">Corpo dell'articolo</label>
                         <textarea name="body" class="form-control" id="body" >{{old('body')}}</textarea>

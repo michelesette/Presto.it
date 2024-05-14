@@ -13,7 +13,7 @@
     <x-display-message/>
 
     {{-- Snippet per verificare errori --}}
-   <x-display-error/>
+    <x-display-errors/>
 
     <div class="container mt-5 newArt">
         <div class="row mt-5 justify-content-center my-5">
