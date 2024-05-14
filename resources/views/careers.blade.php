@@ -21,7 +21,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate reprehenderit, numquam voluptas quo delectus placeat vero facilis illum repudiandae, eius atque, explicabo ab quaerat iure dolor quas perspiciatis tenetur?</p>
         </div>
         <x-display-errors/>
-        <form action="" method="" class="p-5">
+        <form action="{{route('careers.submit')}}" method="POST" class="p-5">
             @csrf
             <div class="mb-3">
                 <label for="role" class="form-label">
