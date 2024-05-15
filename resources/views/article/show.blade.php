@@ -15,37 +15,34 @@
     {{-- Snippet per verificare errori --}}
     <x-display-errors />
 
-    <div class="container d-flex mt-5 ">
-        <div class="row bg-primary ">
-            <div class="col-12-col-md-6">
-                <div class="col-md-4">
+    <div class="container my-5 py-5 ">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-md-6">
+                <div class="d-flex justify-content-center ">
                     <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-3" alt="...">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12-col-md-6">
-                    <h5 class="card-title">{{ $article->title }}</h5>
-                    <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
-                    <p class="card-text">{{ $article->body }}</p>
-                    @if ($article->category)
+
+
+            <div class="col-12 col-md-4 order-md-last text-black text-center mt-4">
+                <h5 class="card-title">{{ $article->title }}</h5>
+                <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
+                <p class="card-text">{{ $article->body }}</p>
+                @if ($article->category)
                     <div>
                         <span class="badge text-bg-primary">#{{ $article->category->name }}</span>
                     </div>
-                    @endif
+                @endif
 
-                    @auth
+                @auth
                     <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
                     <form action="{{ route('article.destroy', compact('article')) }}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
                     </form>
-                    @endauth
-                </div>
+                @endauth
             </div>
         </div>
     </div>
-
-
-
 </x-layout>

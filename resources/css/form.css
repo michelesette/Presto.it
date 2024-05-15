@@ -19,7 +19,7 @@
 }
 
 .articleCont{
-  backdrop-filter: blur(2000px);
+  /* backdrop-filter: blur(2000px); */
   background-position: center;
   background-size: contain;
   height: 20vh;
