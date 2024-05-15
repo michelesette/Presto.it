@@ -20,6 +20,6 @@ class UserIsAdmin
            return $next($request);
         }
 
-        return redirect(route('homepage'))->with('message', 'non sei autorizzato,coglione');
+        return redirect(route('homepage'))->with('message', 'non sei autorizzato');
     }
 }
