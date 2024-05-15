@@ -25,7 +25,7 @@ class ArticleRequest extends FormRequest
             'title'=>'required | min:3',
             'subtitle'=>'required',
             'body'=>'required',
-            'category_id'=>'required | integer'
+            'category_id'=>'required | numeric'
             
         ];
     }
@@ -35,7 +35,8 @@ class ArticleRequest extends FormRequest
             'title.required'=>'Il titolo è obbligatorio.',
             'subtitle.required'=>'Il sottotitolo è obbligatorio.',
             'body.required'=>"Il corpo dell'articolo è obbligatorio.",
-            'category_id.required'=>'La categoria è obbligatoria.'
+            'category_id.required'=>'La categoria è obbligatoria.',
+            'category_id.numeric'=>'La categoria è obbligatoria.'
            
         ];
     }
