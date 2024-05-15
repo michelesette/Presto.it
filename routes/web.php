@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
@@ -46,3 +47,9 @@ Route::get('careers',[PublicController::class, 'careers'])
 
 Route::post('careers/submit',[PublicController::class, 'careersSubmit'])
 ->name('careers.submit');
+
+//rotta admin//
+Route::middleware('admin')->group(function(){
+
+    Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
