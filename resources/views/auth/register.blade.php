@@ -39,7 +39,7 @@
                             </div>
                             <div class="my-3  col-12 d-flex justify-content-center">
                                 <p>se sei già registrato allora accedi subito:</p>
-                                <a href="{{ route('login')}}" class="btn mybtn"> Registrati </a>
+                                <a href="{{ route('login')}}" class="btn mybtn"> Accedi </a>
                             </div>
                 </form>
             </div>
