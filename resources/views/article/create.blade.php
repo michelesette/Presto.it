@@ -20,7 +20,7 @@
     <x-display-errors />
 
     <div class="container  newArt">
-        <div class="row mt-5 justify-content-center my-5">
+        <div class="row mt-2 justify-content-center py-5">
             <div class="col-12 col-md-6 justify-content-center ">
                 <form class="rounded-4 shadow bg-secondary-subtle  p-3" action="{{ route('article.store') }}"
                     method="POST" enctype="multipart/form-data">
