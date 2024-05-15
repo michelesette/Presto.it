@@ -15,14 +15,14 @@
     {{-- Snippet per verificare errori --}}
     <x-display-errors />
 
-    <div class="container my-5 py-5 ">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-md-6">
-                <div class="d-flex justify-content-center ">
-                    <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-3" alt="...">
-                </div>
-                <div class="justify-content-center text-black mt-4 text-center">
-                    <h3 class="card-title">{{ $article->title }}</h3>
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center mt-5 ">
+            <div class="col-12 col-md-6 altezzaCostum">
+                <div class=" justify-content-center fotoShow ">
+                    <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-3 mt-5" alt="...">
+                    <div class="justify-content-center text-black mt-4 text-center">
+                        <h3 class="card-title">{{ $article->title }}</h3>
+                    </div>
                 </div>
             </div>
 
