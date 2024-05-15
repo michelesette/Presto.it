@@ -1,8 +1,11 @@
-<div class="card my-5 shadow" data-aos="fade-up">
-    <img src="{{ Storage::url($article->img) }}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h4 class="card-title">{{ $article->title }}</h4>
-        <p class="card-text">{{ $article->subtitle }}</p>
+<div class="card cardCustom my-5 shadow " data-aos="fade-up">
+    <img src="{{ Storage::url($article->img) }}" class="card-img-top imgCastom" alt="...">
+    <div class="card-body d-flex flex-column justify-content-between ">
+       <div>
+            <h4 class="card-title text-center ">{{ $article->title }}</h4>
+            <p class="card-text">{{ $article->subtitle }}</p>
+       </div>
+        
         <div class="d-flex justify-content-between align-items-center">
             <a class="btn mybtn1"
                 href="{{ route('article.byCategory', ['category' => $article->category->id]) }}">{{ $article->category->name }}</a>

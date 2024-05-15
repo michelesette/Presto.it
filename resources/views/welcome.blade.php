@@ -9,7 +9,7 @@
                     @endguest
                     @auth
                         <h1 class="text-dark align-content-center text-center">Ciao {{ Auth::user()->name }}!</h1>
-                        <h5 class="text-dark align-content-center text-center">Welcome back </h5>
+                        <h5 class="text-dark align-content-center text-center">Benvenuto</h5>
                     @endauth
                 </div>
             </div>
