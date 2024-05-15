@@ -15,34 +15,22 @@
             <td>{{$user->email}}</td>
             <td>
               @switch($role)
-                  @case('amministratore')
-                      <form action="{{route('admin.setAdmin', compact('user'))}}" method="POST" >
-                      @csrf
-                      @method('patch')
-                      <button type="submit" class="btn mybtn my-2">Attiva: {{$role}}</button>
-                    </form>
-                      @break
+              @case('amministratore')
+                  <a href="{{ route('admin.setAdmin', compact('user')) }}"
+                      class="btn mybtn text-white">Attiva: {{ $role }} </a>
+              @break
 
-                      @case('revisore')
-                      <form action="{{route('admin.setRevisor', compact('user'))}}" method="POST" >
-                      @csrf
-                      @method('patch')
-                      <button type="submit" class="btn mybtn my-2">Attiva {{$role}}</button>
-                    </form>
-                      @break
+              @case('revisore')
+                  <a href="{{ route('admin.setRevisor', compact('user')) }}"
+                      class="btn mybtn text-white">Attiva: {{ $role }} </a>
+              @break
 
-                      @case('scrittore')
-                      <form action="{{route('admin.setWriter', compact('user'))}}" method="POST" >
-                      @csrf
-                      @method('patch')
-                      <button type="submit" class="btn mybtn my-2">Attiva:{{$role}}</button>
-                    </form>
-                      @break
-               
-               
-                      
-              @endswitch
-                <button class=" btn mybtn">Attiva{{$role}}</button>
+              @case('redattore')
+                  <a href="{{ route('admin.setWriter', compact('user')) }}"
+                      class="btn mybtn text-white">Attiva: {{ $role }} </a>
+              @break
+          @endswitch
+                {{-- <button type="submit" class=" btn mybtn">Attiva{{$role}}</button> --}}
             </td>
           </tr>
       @endforeach
