@@ -1,7 +1,7 @@
 <x-layout title="Articolo - {{ $article->title }}">
     <header class="header pt-1 articleCont">
-        <div class="container-fluid mt-5 p-5 mb-5 rounded-3">
-            <div class="row justify-content-center align-content-center h-100">
+        <div class="container-fluid mt-5 py-5 px-lg-5 mb-lg-5 rounded-3">
+            <div class="row justify-content-center align-content-center">
                 <div class="col-12 text-bg-light  d-flex justify-content-center align-items-center">
                     <h1 class="text-center">{{ $article->title }}</h1>
                 </div>
@@ -15,11 +15,11 @@
     {{-- Snippet per verificare errori --}}
     <x-display-errors />
 
-    <div class="container my-5 py-5">
-        <div class="row justify-content-center mt-5 ">
-            <div class="col-12 col-md-6 altezzaCostum">
+    <div class="container my-lg-5 pt-lg-5 pb-5 ">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
                 <div class=" justify-content-center fotoShow ">
-                    <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-3 mt-5" alt="...">
+                    <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-3 mt-lg-5" alt="...">
                     <div class="justify-content-center text-black mt-4 text-center">
                         <h3 class="card-title">{{ $article->title }}</h3>
                     </div>
