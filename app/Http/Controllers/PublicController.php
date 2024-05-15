@@ -24,7 +24,7 @@ class PublicController extends Controller
         $request->validate([
             'role'=>'required',
             'email'=>'required|email',
-            'message'=>'required',
+            'message'=>'required'
         ]);
 
         $user=Auth::user();

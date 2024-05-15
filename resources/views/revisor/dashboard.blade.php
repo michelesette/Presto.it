@@ -1,4 +1,4 @@
-<x-layout title="Revisore">
+<x-layout title="Revisor">
 
 
     <header class="header articleCont">
@@ -19,7 +19,7 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <h2 class=" text-dark ">Articolo da revisionare</h2>
-            <x-articles-table/> :articles="$unrevisionedArticles"/>
+            <x-articles-table :articles="$unrevisionedArticles"/>
         </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <h2 class=" text-dark ">Articoli pubblicati</h2>
-            <x-articles-table/> :articles="$acceptedArticles" />
+            <x-articles-table :articles="$acceptedArticles"/>
         </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <h2 class=" text-dark ">Articoli respinti</h2>
-            <x-articles-table/> :articles="$rejectedArticles" />
+            <x-articles-table :articles="$rejectedArticles"/>
         </div>
     </div>
   </div>

@@ -17,9 +17,9 @@
             <td>{{$article->user->name}}</td>
             <td>
               @if (is_null($article->is_accepted))
-                <a href="{{route('article.show', compact('article')}}" class="btn mybtn text-decoration-none">Leggi l'articolo</a>
+                <a href="{{route('article.show', $article)}}" class="btn mybtn text-decoration-none">Leggi l'articolo</a>
                 @else 
-                <form action="{{route('revisor.undoArticle', compact('article'))}}" method="POST" >
+                <form action="{{route('revisor.undoArticle', $article)}}" method="POST" >
                       @csrf
                       <button type="submit" class="btn mybtn my-2">Riporta in revisione</button>
                 </form>

@@ -21,7 +21,7 @@
                 <p>La figura del revisore di un giornale, o correttore di bozze, svolge un ruolo fondamentale nel
                     garantire la qualità e l'accuratezza dei contenuti editoriali. Il suo lavoro meticoloso contribuisce
                     a dare ai lettori un'informazione affidabile e fruibile.</p>
-                <h2>Lavora come reddatore</h2>
+                <h2>Lavora come redattore</h2>
                 <p>Diventare un redattore può essere una scelta professionale gratificante e ricca di stimoli. I
                     redattori svolgono un ruolo fondamentale nella creazione di contenuti informativi e coinvolgenti per
                     una varietà di media, tra cui giornali, riviste, siti web, blog e social media.

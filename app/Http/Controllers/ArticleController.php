@@ -29,7 +29,7 @@ class ArticleController extends Controller
 
     public function byUser(User $user)
     {
-        $articles = $user->articles()->orderBy('created_at', 'desc')->get();
+        $articles = $user->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
         return view('article.byUser', compact('user','articles'));
     }
     /**
