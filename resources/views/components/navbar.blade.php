@@ -46,6 +46,10 @@
                   <li><a class="dropdown-item nav-link  my-3" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li> 
                   @endif
                   
+                  @if (Auth::user()->is_revisor)
+                  <li><a class="dropdown-item nav-link  my-3" href="{{route('revisor.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard del Revisore</a></li> 
+                  @endif
+                  
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>

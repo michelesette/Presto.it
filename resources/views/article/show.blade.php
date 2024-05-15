@@ -35,6 +35,24 @@
                     </div>
                 @endif
 
+                @if (Auth::user() && Auth::user()->is_revisor)
+                    <form action="{{route('revisor.acceptArticle), compact('article')}}" method="POST">
+                    @csrf    
+                    <button type="submit" class="btn mybtn">Acceta articolo</button>
+                    </form>
+
+                    <form action="{{route('revisor.rejectArticle), compact('article')}}" method="POST">
+                    @csrf    
+                    <button type="submit" class="btn mybtn">Rifiuta articolo</button>
+                    </form>
+
+                    <form action="{{route('revisor.undoArticle), compact('article')}}" method="POST">
+                    @csrf    
+                    <button type="submit" class="btn mybtn">Acceta articolo</button>
+                    </form>
+
+                @endif
+
                 @auth
                     <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
                     <form action="{{ route('article.destroy', compact('article')) }}" method="POST">

@@ -4,10 +4,11 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 // HOME
-Route::get('/',[PublicController::class, 'welcome'])
-->name('homepage');
+Route::get('/', [PublicController::class, 'welcome'])
+    ->name('homepage');
 
 
 // ARTICLE
@@ -18,39 +19,39 @@ Route::get('/article/create', [ArticleController::class, 'create'])
 ->name('article.create')->middleware('auth');
 
 Route::get('/article/index', [ArticleController::class, 'index'])
-->name('article.index');
+    ->name('article.index');
 
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])
-->name('article.show');
+    ->name('article.show');
 
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])
-->name('article.edit')->middleware('auth');
+    ->name('article.edit')->middleware('auth');
 
-Route::put('/article/update/{article}',[ArticleController::class, 'update'])
-->name('article.update')->middleware('auth');
+Route::put('/article/update/{article}', [ArticleController::class, 'update'])
+    ->name('article.update')->middleware('auth');
 
-Route::delete('/article/destroy/{article}',[ArticleController::class, 'destroy'])
-->name('article.destroy')->middleware('auth');
+Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'])
+    ->name('article.destroy')->middleware('auth');
 //rotta filtro categorie
 
-Route::get('/article/category/{category}',[ArticleController::class, 'byCategory'])
-->name('article.byCategory')->middleware('auth');
+Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])
+    ->name('article.byCategory')->middleware('auth');
 
 //rotta filtro redattore
 
-Route::get('/article/user/{user}',[ArticleController::class, 'byUser'])
-->name('article.byUser')->middleware('auth');
+Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])
+    ->name('article.byUser')->middleware('auth');
 
 //lavora con noi
-Route::get('careers',[PublicController::class, 'careers'])
-->name('careers')->middleware('auth');
+Route::get('careers', [PublicController::class, 'careers'])
+    ->name('careers')->middleware('auth');
 
-Route::post('careers/submit',[PublicController::class, 'careersSubmit'])
-->name('careers.submit');
+Route::post('careers/submit', [PublicController::class, 'careersSubmit'])
+    ->name('careers.submit');
 
 //rotta admin//
-Route::middleware('admin')->group(function(){
-      
+Route::middleware('admin')->group(function () {
+
     Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
     Route::patch('admin/{user}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
@@ -59,3 +60,21 @@ Route::middleware('admin')->group(function(){
 
     Route::patch('admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
 });
+
+// rotta revisor
+Route::middleware('revisor')->group(function () {
+
+    Route::get('revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
+
+    Route::post('revisor/{article}/accept', [RevisorController::class, 'acceptedArticle'])->name('revisor.acceptedArticle');
+
+    Route::post('revisor/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
+
+    Route::post('revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
+});
+
+// rotta writer
+// Route::middleware('writer')->group(function () {
+
+   
+// });

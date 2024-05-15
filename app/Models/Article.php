@@ -18,7 +18,8 @@ class Article extends Model
         'body',
         'img',
         'data',
-        'category_id'
+        'category_id',
+        'is_accepted'
 
     ];
 

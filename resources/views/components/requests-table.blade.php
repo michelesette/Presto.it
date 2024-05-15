@@ -23,7 +23,7 @@
                     </form>
                       @break
 
-                      @case('revisor')
+                      @case('revisore')
                       <form action="{{route('admin.setRevisor', compact('user'))}}" method="POST" >
                       @csrf
                       @method('patch')
@@ -31,7 +31,7 @@
                     </form>
                       @break
 
-                      @case('writer')
+                      @case('scrittore')
                       <form action="{{route('admin.setWriter', compact('user'))}}" method="POST" >
                       @csrf
                       @method('patch')
