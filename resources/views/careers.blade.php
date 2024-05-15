@@ -11,7 +11,7 @@
   </header>
 
 <div class="container mt-5">
-    <div class="row text-center justify-content-center ">
+    <div class="row text-center justify-content-center text-black">
         <div class="col-12 col-md-6">
             <h2>Lavora come amministratore</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate reprehenderit, numquam voluptas quo delectus placeat vero facilis illum repudiandae, eius atque, explicabo ab quaerat iure dolor quas perspiciatis tenetur?</p>
