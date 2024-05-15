@@ -34,16 +34,16 @@
                                 <input type="password" class="form-control" id="password_confirmation"
                                     name="password_confirmation">
                             </div>
-                            <div class="mb-3 col-12 d-flex justify-content-center">
+                            <div class="col-12 d-flex justify-content-center">
                                 <button type="submit" class="btn mybtn mt-3 ">Registrati</button>
                             </div>
-                            <div>
+                            <div class="mt-3 col-12 d-flex justify-content-center">
                                 <p>se sei già registrato allora accedi subito:</p>
                             </div>
-                            <div class="my-3  col-12 d-flex justify-content-center">
+                            <div class="  col-12 d-flex justify-content-center">
                                 <a href="{{ route('login') }}" class="btn mybtn"> Accedi </a>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </form>
             </div>

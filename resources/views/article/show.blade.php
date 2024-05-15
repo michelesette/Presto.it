@@ -20,34 +20,45 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <div class="card my-5 shadow p-1" style="width: 20rem;">
-                            <img src="{{ Storage::url($article->img) }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h3 class="card-title p-2">{{ $article->title }}</h3>
-                                <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
-                                <p class="card-text p-2">{{ $article->body }}</p>
+                        <div class=" container card my-5 py-5" style="max-width: 540px;">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-4">
+                                    <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-start"
+                                    alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $article->title }}</h5>
+                                        <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
+                                        <p class="card-text">{{ $article->body }}</p>
+                                        @if ($article->category)
+                                        <div>
+                                            <span
+                                            class="badge text-bg-primary">#{{ $article->category->name }}</span>
+                                        </div>
+                                        @endif
 
-                                @if ($article->category)
-                                    <div>
-                                        <span class="badge text-bg-primary">#{{ $article->category->name }}</span>
-                                    </div>
-                                @endif
-
-                                @auth
-                                    <a href="{{ route('article.edit', compact('article')) }}"
+                                        @auth
+                                        <a href="{{ route('article.edit', compact('article')) }}"
                                         class="btn mybtn mt-3 ">Modifica</a>
-
-                                    <form action="{{ route('article.destroy', compact('article')) }}" method="POST">
+                                        <form action="{{ route('article.destroy', compact('article')) }}"
+                                        method="POST">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
                                     </form>
-                                @endauth
+                                    @endauth
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
 </x-layout>
