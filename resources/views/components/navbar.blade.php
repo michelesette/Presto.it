@@ -53,11 +53,13 @@
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>
-                  @if (Auth::user()->is_lessor)
+
+                  <!-- @if (Auth::user()->is_lessor)
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('announcements.create')}}"><i class="bi bi-plus-lg"></i>Annuncio</a>
                   </li>
-                  @endif
+                  @endif -->
+                  
                   <li>
                     <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
                       @csrf
