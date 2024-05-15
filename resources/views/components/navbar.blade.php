@@ -43,10 +43,9 @@
                 <ul class="dropdown-menu bg-black mt-2 px-2 text-center ">
                   
                   @if (Auth::user()->is_admin)
-                  <li><a class="dropdown-item nav-link  my-3" href="{{route('dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li>
-                  @elseif(!Auth::user()->is_lessor)
-                  
+                  <li><a class="dropdown-item nav-link  my-3" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li> 
                   @endif
+                  
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>

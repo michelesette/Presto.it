@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Admin">
 
 
     <header class="header articleCont">
@@ -18,7 +18,7 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2>Richeste per ruolo di amministratore</h2>
+            <h2 class=" text-dark ">Richeste per ruolo di amministratore</h2>
             <x-requests-table :roleRequest="$adminRequest" role="amministratore"/>
         </div>
     </div>
@@ -27,7 +27,7 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2>Richeste per ruolo di Revisore</h2>
+            <h2 class=" text-dark ">Richeste per ruolo di Revisore</h2>
             <x-requests-table :roleRequest="$revisorRequest" role="revisore"/>
         </div>
     </div>
@@ -36,7 +36,7 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2>Richeste per ruolo di Redattore</h2>
+            <h2 class=" text-dark ">Richeste per ruolo di Redattore</h2>
             <x-requests-table :roleRequest="$writerRequest" role="redattore"/>
         </div>
     </div>
