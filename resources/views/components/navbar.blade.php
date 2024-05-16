@@ -41,15 +41,15 @@
                   <i class="bi bi-person-circle"></i> {{Auth::user()->name}}
                 </button>
                 <ul class="dropdown-menu bg-black mt-2 px-2 text-center ">
-                  
+
                   @if (Auth::user()->is_admin)
-                  <li><a class="dropdown-item nav-link  my-3" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li> 
+                  <li><a class="dropdown-item nav-link  my-3" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard Admin</a></li>
                   @endif
-                  
+
                   @if (Auth::user()->is_revisor)
-                  <li><a class="dropdown-item nav-link  my-3" href="{{route('revisor.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard del Revisore</a></li> 
+                  <li><a class="dropdown-item nav-link  my-3" href="{{route('revisor.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard del Revisore</a></li>
                   @endif
-                  
+
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>
@@ -57,22 +57,26 @@
                   {{-- <!-- @if (Auth::user()->is_lessor)
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('announcements.create')}}"><i class="bi bi-plus-lg"></i>Annuncio</a>
-                  </li>
-                  @endif --> --}}
-                  
-                  <li>
-                    <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
-                      @csrf
-                      <button type="submit" class="btn btn-danger text-center mb-2 ">Logout<i class="bi bi-box-arrow-right px-2"></i></button>
-                    </form>
-                  </li>
-                </ul>
+              </li>
+              @endif --> --}}
+
+              <li>
+                <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
+                  @csrf
+                  <button type="submit" class="btn btn-danger text-center mb-2 ">Logout<i class="bi bi-box-arrow-right px-2"></i></button>
+                </form>
               </li>
             </ul>
-          </div>
         </li>
-        @endauth
       </ul>
     </div>
+    </li>
+    @endauth
+    </ul>
+    <form class="d-flex" method="GET" action="{{route('article.search')}}">
+      <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
+      <button class="btn mybtn" type="submit">Cerca</button>
+    </form>
+  </div>
   </div>
 </nav>

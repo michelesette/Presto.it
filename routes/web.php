@@ -49,6 +49,10 @@ Route::get('careers', [PublicController::class, 'careers'])
 Route::post('careers/submit', [PublicController::class, 'careersSubmit'])
     ->name('careers.submit');
 
+//rotta di ricerca
+Route::get('article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
+
+
 //rotta admin//
 Route::middleware('admin')->group(function () {
 

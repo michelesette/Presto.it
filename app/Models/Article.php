@@ -7,10 +7,11 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
     protected $fillable = [
 
         'title',
@@ -22,6 +23,16 @@ class Article extends Model
         'is_accepted'
 
     ];
+
+    public function toSearchableArray()
+    {
+        return [
+            'id' => $this->id,
+            'title'=> $this->title,
+            'body'=> $this->body,
+            'category'=> $this->category,
+        ];
+    }
 
     public function category()
     {
