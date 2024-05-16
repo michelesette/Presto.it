@@ -39,11 +39,10 @@
 
                     <div class="mb-3">
                         <label for="body" class="form-label">Corpo dell'articolo</label>
-                        <textarea name="body" class="form-control" id="body">{{old('body')}}</textarea>
+                        <textarea name="body" class="form-control" id="body" cols="30" rows="10">{{old('body')}}</textarea>
                     </div>
-
+                   
                     <div class=" container mb-3">
-
                         <div class="row">
                             <div class="col-4">
                                 <select name="category_id" class="form-select" aria-label="Default select example">
