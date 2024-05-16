@@ -16,6 +16,11 @@ class PublicController extends Controller
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
         return view('welcome', compact('articles'));
     }
+
+    public function staff() {
+        return view('staff');
+    }
+
     public function careers(){
         return view('careers');
     }
@@ -39,7 +44,7 @@ class PublicController extends Controller
             case 'admin':
                 $user->is_admin= NULL;
                 break;
-            
+
            case 'revisor':
                 $user->is_revisor=NULL;
                 break;

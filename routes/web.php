@@ -80,3 +80,8 @@ Route::middleware('writer')->group(function () {
 
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 });
+
+//rotta staff
+
+Route::get('/staff', [PublicController::class, 'staff'])
+    ->name('staff');

@@ -24,5 +24,16 @@
     /* width: 50%; */
     background-position: center;
     background-size: cover;
-    
+
+  }
+
+  .staff{
+        width: 200px;
+        border-radius: 50%;
+        border: 5px solid;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
   }

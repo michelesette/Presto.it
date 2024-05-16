@@ -34,5 +34,5 @@
         </div>
     </section>
 
-
+<x-lostaff></x-lostaff>
 </x-layout>
