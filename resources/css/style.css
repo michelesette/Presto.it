@@ -10,3 +10,19 @@
 .cardCustom{
     height: 700px;
 }
+
+
+
+/* carosello swiper */
+.swiper {
+    width: 100%;
+    /* padding-top: 50px; */
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    /* width: 50%; */
+    background-position: center;
+    background-size: cover;
+    
+  }

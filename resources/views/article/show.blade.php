@@ -33,7 +33,18 @@
                     <div>
                         <span class="badge text-bg-primary">#{{ $article->category->name }}</span>
                     </div>
+                    
                 @endif
+                <div class=" d-flex justify-content-center">
+                    @auth
+                    <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
+                    <form action="{{ route('article.destroy', compact('article')) }}" method="POST" class="mx-3">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
+                    </form>
+                    @endauth
+                </div>
 
                 @if (Auth::user() && Auth::user()->is_revisor)
                 <div class="container">
@@ -41,7 +52,7 @@
                         <div class="col-12 d-flex">
                             <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
                             @csrf    
-                            <button type="submit" class="btn mybtn">Acceta articolo</button>
+                            <button type="submit" class="btn mybtn">Accetta articolo</button>
                             </form>
         
                             <form action="{{route('revisor.rejectArticle', $article)}}" method="POST">
@@ -52,15 +63,8 @@
                         </div>
                     </div>
                 </div>
-
-                @auth
-                    <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
-                    <form action="{{ route('article.destroy', compact('article')) }}" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
-                    </form>
-                @endauth
+                
+                
             </div>
         </div>
     </div>
