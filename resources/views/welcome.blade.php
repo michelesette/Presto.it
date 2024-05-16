@@ -19,11 +19,18 @@
     <!-- sezione articoli recenti -->
     <section class="container">
         <div class="row justify-content-center">
-            @foreach ($articles as $article)
-                <div class="col-12 col-md-3">
-                    <x-card-article :article="$article" />
+            <div class="col-12 col-md-8 ">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        @foreach ($articles as $article)
+                        <div class="swiper-slide">
+                            <x-card-article :article="$article"/>
+                        </div>
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-            @endforeach
+            </div>
         </div>
     </section>
 
