@@ -36,14 +36,14 @@
                     
                 @endif
                 <div class=" d-flex justify-content-center">
-                    @auth
+                    @if (Auth::user() && Auth::user()->is_writer)
                     <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
                     <form action="{{ route('article.destroy', compact('article')) }}" method="POST" class="mx-3">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
                     </form>
-                    @endauth
+                    @endif
                 </div>
 
                 @if (Auth::user() && Auth::user()->is_revisor)
