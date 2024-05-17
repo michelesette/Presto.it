@@ -20,7 +20,8 @@ class Article extends Model
         'img',
         'data',
         'category_id',
-        'is_accepted'
+        'is_accepted',
+    
 
     ];
 
@@ -44,4 +45,7 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
+    }
 }

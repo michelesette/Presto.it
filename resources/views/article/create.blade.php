@@ -57,10 +57,15 @@
                         </div>
                     </div>
                     <div class="mb-3 ">
-                        <label for="img" class="form-label">Inserisci immagina</label>
+                        <label for="img" class="form-label">Inserisci immagine</label>
                         
                             <input name="img" type="file" class="form-control d-flex me-3" id="img" value="{{old('img')}}">
                         
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="tags" class="form-label">Tags:</label>
+                        <input name="tags" class="form-control d-flex me-3" id="tags" value="{{old('tags')}}">
+                        <span class=" small  fst-italic ">Dividi ogni tag con una virgola</span>
                     </div>
                     <button type="submit" class="btn mybtn mt-3">Crea articolo</button>
                 </form>

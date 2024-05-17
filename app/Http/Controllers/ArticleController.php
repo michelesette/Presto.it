@@ -44,9 +44,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-         //recupero tutti i tags
+       $tags= Tag::all();
        $categories = Category::all();
-        return view('article.create', compact('categories'));
+        return view('article.create', compact('categories', 'tags'));
     }
 
     /**
@@ -71,6 +71,21 @@ class ArticleController extends Controller
             
         }
 
+        // $tags= explode(',', $request->tags);
+        // foreach ($tags as $i => $tag) {
+        //     $tags[$i] = trim($tag);
+        // }
+
+        // foreach ($tags as $tag) {
+        //     $newTag = Tag::updateOrCreate(
+        //         ['name' => $tag],
+        //         ['name'=> strtolower($tag)],
+        //     );
+        //     $article->tags()->attach($newTag);
+        // }
+
+        // $article->tags()->attach($request)->tags;
+
         return redirect()->back()->with('message', 'Articolo creato correttamente');
     }
 
@@ -87,9 +102,12 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
+
+        $tags= Tag::all();
+
          $categories = Category::all();
 
-        return view('article.edit', compact('article', 'categories'));
+        return view('article.edit', compact('article', 'categories', 'tags'));
     }
 
     /**

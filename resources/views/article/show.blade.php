@@ -8,13 +8,13 @@
             </div>
         </div>
     </header>
-
+    
     {{-- Snippet per feedback positivo --}}
     <x-display-message />
-
+    
     {{-- Snippet per verificare errori --}}
     <x-display-errors />
-
+    
     <div class="container my-lg-5 pt-lg-5 pb-5 ">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
@@ -25,47 +25,51 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-12 col-md-4 order-md-last text-black text-center mt-4">
                 <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
                 <p class="card-text">{{ $article->body }}</p>
                 @if ($article->category)
-                    <div>
-                        <span class="badge text-bg-primary">#{{ $article->category->name }}</span>
+                <div>
+                    <span class="badge text-bg-primary">#{{ $article->category->name }}</span>
+                </div>
+                
+                @endif
+                
+              
+                    
+                    <div class=" d-flex justify-content-center">
+                        @if (Auth::user() && Auth::user()->is_writer)
+                        <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
+                        <form action="{{ route('article.destroy', compact('article')) }}" method="POST" class="mx-3">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
+                        </form>
+                        @endif
                     </div>
                     
-                @endif
-                <div class=" d-flex justify-content-center">
-                    @auth
-                    <a href="{{ route('article.edit', compact('article')) }}" class="btn mybtn mt-3 ">Modifica</a>
-                    <form action="{{ route('article.destroy', compact('article')) }}" method="POST" class="mx-3">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" class="btn btn-danger  mt-3 ">Elimina</button>
-                    </form>
-                    @endauth
-                </div>
-
-                @if (Auth::user() && Auth::user()->is_revisor)
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 d-flex">
-                            <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
-                            @csrf    
-                            <button type="submit" class="btn mybtn">Accetta articolo</button>
-                            </form>
-        
-                            <form action="{{route('revisor.rejectArticle', $article)}}" method="POST">
-                            @csrf    
-                            <button type="submit" class="btn mybtn">Rifiuta articolo</button>
-                            </form>
-                        @endif
+                    @if (Auth::user() && Auth::user()->is_revisor)
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
+                                    @csrf    
+                                    <button type="submit" class="btn mybtn">Accetta articolo</button>
+                                </form>
+                                
+                                <form action="{{route('revisor.rejectArticle', $article)}}" method="POST">
+                                    @csrf    
+                                    <button type="submit" class="btn mybtn">Rifiuta articolo</button>
+                                </form>
+                                @endif
+                            </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
-                
-                
             </div>
         </div>
-    </div>
-</x-layout>
+    </x-layout>
+    
