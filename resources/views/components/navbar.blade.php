@@ -32,6 +32,9 @@
           </ul>
         </div>
         @endguest
+        <li class="nav-item px-3 ">
+          <a class="nav-link" href="{{route('staff')}}"><i class="bi bi-person-vcard"></i>Staff</a>
+        </li>
         @auth
         <li>
           <div>

@@ -27,7 +27,7 @@
          <div class="col-12 mb-3 text-center ">
              <h5 class="tx-1">Sezioni</h5>
              <ul class="nav flex-column">
-                 <li class="nav-item mb-2"><a href="#"
+                 <li class="nav-item mb-2"><a href="{{route('homepage')}}"
                          class="nav-link p-0 text-body-secondary font-dosis">Home</a></li>
                  <li class="nav-item mb-2"><a href="/staff"
                          class="nav-link p-0 text-body-secondary font-dosis">STAFF</a></li>

@@ -15,17 +15,13 @@
     {{-- Snippet per verificare errori --}}
     <x-display-errors />
 
-    {{-- <div class="container mt-5 newArt">
-        <div class="row mt-5 justify-content-center"> --}}
             <div class="container">
                 <div class="row justify-content-center p-2 ">
                     @foreach ($articles as $article)
                         <div class="col-12 col-md-4">
-                            <x-card-article :article="$article" />
+                            <x-card-article :article="$article"/>
                         </div>
                     @endforeach
                 </div>
             </div>
-        {{-- </div>
-    </div> --}}
 </x-layout>

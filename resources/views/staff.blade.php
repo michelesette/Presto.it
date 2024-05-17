@@ -24,7 +24,10 @@
         <div class="card-body">
           <h2 class="tx-1 design-underline">Michele Sette</h2>
           <p class="font-dosis lead">Artista classe 1981, specializzato nello stile cartoon e nel fare i piercing,
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium? Porro aperiam quae beatae odio consequatur architecto rem error? Id dolore dolorem error necessitatibus ipsa non placeat doloremque natus temporibus? 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium? Porro aperiam quae beatae odio consequatur architecto rem error? Id dolore dolorem error necessitatibus ipsa non placeat doloremque natus temporibus?
+            <div class="iconeStaff">
+              <a href="https://www.linkedin.com/in/karim-ben-abid-front-end/" class="bi bi-linkedin" target="_blank"></a>
+            </div>
           </p>
         </div>
       </div>
@@ -40,8 +43,10 @@
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Claudia Zampini</h2>
-          <p class="font-dosis lead">Artista classe 1981, specializzato nello stile cartoon e nel fare i piercing,
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium? Porro aperiam quae beatae odio consequatur architecto rem error? Id dolore dolorem error necessitatibus ipsa non placeat doloremque natus temporibus? 
+          <p class="font-dosis lead">Sono un Full Stack developer junior, affronto le sfide lavorative sempre con atteggiamento propositivo, ho esperienza pluriennale nel campo commerciale lato amministrativo e della gestione del cliente. Personalità Intraprendente e determinata, abituata a lavorare in team.
+            <div class="iconeStaff">
+              <a href="https://www.linkedin.com/in/c-zampini/" class="bi bi-linkedin" target="_blank"></a>
+            </div>
           </p>
         </div>
       </div>
@@ -51,8 +56,13 @@
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Vincenzo Cioffi</h2>
-          <p class="font-dosis lead">Artista classe 1981, specializzato nello stile cartoon e nel fare i piercing,
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium? Porro aperiam quae beatae odio consequatur architecto rem error? Id dolore dolorem error necessitatibus ipsa non placeat doloremque natus temporibus? 
+          <p class="font-dosis lead">Sono un full stack developer con competenze sul front-end e back-end. Ho maturato le mie
+            conoscenze e competenze in questo campo frequentando un corso per web developer organizzato
+            da Aulab srl-Bari,Italy .Mi piace molto lavorare in gruppo e le mie caratteristiche personali e capacità
+            sono: l'espressività ,saper ascoltare, motivare, la praticità, la curiosità e la gentilezza.
+            <div class="iconeStaff">
+              <a href="https://www.linkedin.com/in/vincenzo-cioffi-fullstack-developer/" class="bi bi-linkedin" target="_blank"></a>
+            </div> 
           </p>
         </div>
       </div>
@@ -68,7 +78,11 @@
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Marianna Conticelli</h2>
-          <p class="font-dosis lead">Artista classe 1990. Fin da bambina sceglie di comunicare attraverso  il disegno.</p>
+          <p class="font-dosis lead">Artista classe 1990. Fin da bambina sceglie di comunicare attraverso  il disegno.
+            <div class="iconeStaff">
+              <a href="https://www.linkedin.com/in/karim-ben-abid-front-end/" class="bi bi-linkedin" target="_blank"></a>
+            </div>
+          </p>
         </div>
       </div>
     </div>
