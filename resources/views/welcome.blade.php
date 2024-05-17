@@ -17,7 +17,7 @@
     </header>
 
     <!-- sezione articoli recenti -->
-    <section class="container">
+    <section class=" container-fluid ">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 ">
                 <div class="swiper mySwiper">

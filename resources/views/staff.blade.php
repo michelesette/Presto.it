@@ -23,10 +23,9 @@
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Michele Sette</h2>
-          <p class="font-dosis lead">Artista classe 1981, specializzato nello stile cartoon e nel fare i piercing,
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium? Porro aperiam quae beatae odio consequatur architecto rem error? Id dolore dolorem error necessitatibus ipsa non placeat doloremque natus temporibus?
+          <p class="font-dosis lead">Sono Laureato in Ingegneria informatica e Junior full stack developer con competenze di sviluppo in ambito front-end e back-end apprese attraverso il coding bootcamp di Aulab. Particolare predilezione per l’utilizzo del framework Laravel e della programmazione back-end. Buone capacità di lavorare in team, e di risolvere i problemi, maturate anche grazie alla esperienza professionale in ambito sales.
             <div class="iconeStaff">
-              <a href="https://www.linkedin.com/in/karim-ben-abid-front-end/" class="bi bi-linkedin" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/michele-sette-web-developer/" class="bi bi-linkedin" target="_blank"></a>
             </div>
           </p>
         </div>
@@ -73,7 +72,7 @@
     
     <div class="row justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1000">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="./immagini/la chiara.jpeg" class="staff img-fluid borde-1" alt=""></a>  
+        <a class="text-decoration-none text-reset"><img src="/media/marianna.jpg" class="staff img-fluid borde-1" alt=""></a>  
       </div>
       <div class="col-md-6">
         <div class="card-body">

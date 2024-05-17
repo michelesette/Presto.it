@@ -1,9 +1,9 @@
-<x-layout title="Articolo - {{ $article->title }}">
+<x-layout title="Articolo - {{ $article->category->name}}">
     <header class="header pt-1 articleCont">
         <div class="container-fluid mt-5 py-5 px-lg-5 mb-lg-5 rounded-3">
             <div class="row justify-content-center align-content-center">
                 <div class="col-12 text-bg-light  d-flex justify-content-center align-items-center">
-                    <h1 class="text-center">{{ $article->title }}</h1>
+                    <h1 class="text-center">{{ $article->category->name}}</h1>
                 </div>
             </div>
         </div>
@@ -21,16 +21,16 @@
                 <div class=" justify-content-center fotoShow ">
                     <img src="{{ Storage::url($article->img) }}" class="img-fluid rounded-3 mt-lg-5" alt="...">
                     <div class="justify-content-center text-black mt-4 text-center">
-                        <h3 class="card-title">{{ $article->title }}</h3>
+                        <h1 class="card-title">{{ $article->title }}</h1>
                     </div>
                 </div>
             </div>
             
             <div class="col-12 col-md-4 order-md-last text-black mt-4">
-                <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
+                <h4 class="card-title p-2">{{ $article->subtitle }}</h4>
                 <p class="card-text mt-4">{{ $article->body }}</p>
                 @if ($article->category)
-                    <div>
+                    <div class="d-flex justify-content-center ">
                         <span class="badge text-bg-primary">{{ $article->category->name }}</span>
                     </div>
                     
@@ -49,7 +49,7 @@
                 @if (Auth::user() && Auth::user()->is_revisor)
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 d-flex mt-3 justify-content-center">
+                        <div class="col-12 d-flex mt-4 justify-content-center">
                             <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
                             @csrf    
                             <button type="submit" class="btn mybtn mx-5 ">Accetta articolo</button>

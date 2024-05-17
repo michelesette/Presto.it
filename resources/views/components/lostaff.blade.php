@@ -5,7 +5,7 @@
             <a href="{{ route('staff') }}"> <img class="staff mx-3" src="/media/michele.jpg" alt=""></a>
             <a href="{{ route('staff') }}"> <img class="staff mx-3" src="/media/claudia.jpg" alt=""></a>
             <a href="{{ route('staff') }}"> <img class="staff mx-3" src="/media/vincenzo.jpeg" alt=""></a>
-            <a href="{{ route('staff') }}"> <img class="staff mx-3" src="/media/cane.png" alt=""></a>
+            <a href="{{ route('staff') }}"> <img class="staff mx-3" src="/media/marianna.jpg" alt=""></a>
         </div>
     </div>
 </div>
