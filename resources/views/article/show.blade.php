@@ -31,7 +31,7 @@
                 <p class="card-text">{{ $article->body }}</p>
                 @if ($article->category)
                     <div>
-                        <span class="badge text-bg-primary">#{{ $article->category->name }}</span>
+                        <span class="badge text-bg-primary">{{ $article->category->name }}</span>
                     </div>
                     
                 @endif
@@ -49,15 +49,15 @@
                 @if (Auth::user() && Auth::user()->is_revisor)
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 d-flex">
+                        <div class="col-12 d-flex mt-3 justify-content-center">
                             <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
                             @csrf    
-                            <button type="submit" class="btn mybtn">Accetta articolo</button>
+                            <button type="submit" class="btn mybtn mx-5 ">Accetta articolo</button>
                             </form>
         
                             <form action="{{route('revisor.rejectArticle', $article)}}" method="POST">
                             @csrf    
-                            <button type="submit" class="btn mybtn">Rifiuta articolo</button>
+                            <button type="submit" class="btn mybtn mx-5 ">Rifiuta articolo</button>
                             </form>
                         @endif
                         </div>

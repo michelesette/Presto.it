@@ -30,10 +30,13 @@
   .staff{
         width: 200px;
         border-radius: 50%;
-        border: 5px solid;
+        border: 5px solid #5456df;
         padding: 5px;
         text-align: center;
         justify-content: center;
         align-items: center;
+  }
 
+  .iconeStaff{
+    font-size: xx-large;
   }
