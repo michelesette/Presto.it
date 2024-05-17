@@ -24,7 +24,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($articles as $article)
                         <div class="swiper-slide">
-                            <x-card-article :article="$article"/>
+                            <x-card-article :article="$article" :tags="$article->tags"/>
                         </div>
                         @endforeach
                     </div>
@@ -32,6 +32,11 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- staff -->
+    <section>
+        <h1 class="mt-5 mb-2 text-center text-black ">Lo Staff DreamTeam</h1>
     </section>
 
 <x-lostaff></x-lostaff>

@@ -53,33 +53,30 @@
                   <li><a class="dropdown-item nav-link  my-3" href="{{route('revisor.dashboard')}}"><i class="fa-solid fa-user-tie"></i> Dashboard del Revisore</a></li>
                   @endif
 
+                  @if (Auth::user()->is_writer)
                   <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>
+                  @endif
 
-                  {{-- <!-- @if (Auth::user()->is_lessor)
+                  
                   <li>
-                    <a class="dropdown-item nav-link  my-3" href="{{route('announcements.create')}}"><i class="bi bi-plus-lg"></i>Annuncio</a>
-              </li>
-              @endif --> --}}
-
-              <li>
-                <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
-                  @csrf
-                  <button type="submit" class="btn btn-danger text-center mb-2 ">Logout<i class="bi bi-box-arrow-right px-2"></i></button>
-                </form>
+                    <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
+                      @csrf
+                      <button type="submit" class="btn btn-danger text-center mb-2 ">Logout<i class="bi bi-box-arrow-right px-2"></i></button>
+                    </form>
+                  </li>
+                </ul>
               </li>
             </ul>
+          </div>
         </li>
+        @endauth
       </ul>
+      <form class="d-flex" method="GET" action="{{route('article.search')}}">
+        <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
+        <button class="btn mybtn" type="submit">Cerca</button>
+      </form>
     </div>
-    </li>
-    @endauth
-    </ul>
-    <form class="d-flex" method="GET" action="{{route('article.search')}}">
-      <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
-      <button class="btn mybtn" type="submit">Cerca</button>
-    </form>
-  </div>
   </div>
 </nav>

@@ -18,7 +18,7 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2 class=" text-dark ">Richeste per ruolo di amministratore</h2>
+            <h2 class=" text-dark text-center">Richeste per ruolo di amministratore</h2>
             <x-requests-table :roleRequest="$adminRequest" role="amministratore"/>
         </div>
     </div>
@@ -27,7 +27,7 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2 class=" text-dark ">Richeste per ruolo di Revisore</h2>
+            <h2 class=" text-dark text-center">Richeste per ruolo di Revisore</h2>
             <x-requests-table :roleRequest="$revisorRequest" role="revisore"/>
         </div>
     </div>
@@ -36,8 +36,18 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2 class=" text-dark ">Richeste per ruolo di Redattore</h2>
+            <h2 class=" text-dark text-center">Richeste per ruolo di Redattore</h2>
             <x-requests-table :roleRequest="$writerRequest" role="redattore"/>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h2 class="text-dark text-center">Tutti i tags</h2>
+            <!-- richiamo componente table tags -->
         </div>
     </div>
   </div>

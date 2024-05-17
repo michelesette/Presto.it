@@ -67,25 +67,23 @@ class ArticleController extends Controller
         if($request->file('img')){
 
             $article->img=$request->file('img')->store('public/img');
-            $article->save();
-            
+            $article->save();  
         }
 
          $tags= explode(',', $request->tags);
+
          foreach ($tags as $i => $tag) {
              $tags[$i] = trim($tag);
          }
 
          foreach ($tags as $tag) {
-             $newTag = Tag::updateOrCreate(
-                 ['name' => $tag],
-                 ['name'=> strtolower($tag)],
-             );
+             $newTag = Tag::updateOrCreate([
+                'name' => strtolower($tag)
+             ]);
              $article->tags()->attach($newTag);
          }
 
-        
-
+    
         return redirect()->back()->with('message', 'Articolo creato correttamente');
     }
 

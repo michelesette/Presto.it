@@ -3,7 +3,7 @@
   <div id="staff" class="container my-5 p-5 bg-white text-black overflow-hidden">
     <h1 class="d-flex justify-content-center">STAFF</h1>
     
-    <div class="row justify-content-center my-3 py-3 mt-5 " data-aos="fade-right" data-aos-delay="1000">
+    <div class="row align-items-center justify-content-center my-3 py-3 mt-5 " data-aos="fade-right" data-aos-delay="1000">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
         <a  class="text-decoration-none text-reset"><img src="/media/karim.jpg" class="staff img-fluid borde-1" alt=""></a>  
       </div>
@@ -19,7 +19,7 @@
       </div>
     </div>
     
-    <div class="row justify-content-center my-3 py-3" data-aos="fade-left" data-aos-delay="1200">
+    <div class="row align-items-center  justify-content-center my-3 py-3" data-aos="fade-left" data-aos-delay="1200">
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Michele Sette</h2>
@@ -35,7 +35,7 @@
       </div>
     </div>
     
-    <div class="row justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1400">
+    <div class="row align-items-center justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1400">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
         <a class="text-decoration-none text-reset"><img src="/media/claudia.jpg" class="staff img-fluid borde-1" alt=""></a>  
       </div>
@@ -51,7 +51,7 @@
       </div>
     </div>
     
-    <div class="row justify-content-center my-3 py-3 " data-aos="fade-left" data-aos-delay="1000">
+    <div class="row align-items-center justify-content-center my-3 py-3 " data-aos="fade-left" data-aos-delay="1000">
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Vincenzo Cioffi</h2>
@@ -70,7 +70,7 @@
       </div>
     </div>
     
-    <div class="row justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1000">
+    <div class="row align-items-center justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1000">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
         <a class="text-decoration-none text-reset"><img src="/media/marianna.jpg" class="staff img-fluid borde-1" alt=""></a>  
       </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,16 @@ class AdminController extends Controller
         $writerRequest = User::where('is_writer', NULL)->get();
 
         return view('admin.dashboard',compact('adminRequest','revisorRequest','writerRequest'));
+    }
+
+    public function editTag(Request $request, Tag $tag){
+        $request->validate([
+            'name' => 'required|unique:tags'
+        ]);
+        $tag->update([
+            'name' => strtolower($request->name)
+        ]);
+        return redirect()->back()->with('message', 'Tag aggiornato correttamente');
     }
 
     public function setAdmin(User $user){
