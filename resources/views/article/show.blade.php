@@ -8,13 +8,13 @@
             </div>
         </div>
     </header>
-
+    
     {{-- Snippet per feedback positivo --}}
     <x-display-message />
-
+    
     {{-- Snippet per verificare errori --}}
     <x-display-errors />
-
+    
     <div class="container my-lg-5 pt-lg-5 pb-5 ">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-12 col-md-4 order-md-last text-black text-center mt-4">
                 <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
                 <p class="card-text">{{ $article->body }}</p>
@@ -62,10 +62,10 @@
                         @endif
                         </div>
                     </div>
+                    
+                    
                 </div>
-                
-                
             </div>
         </div>
-    </div>
-</x-layout>
+    </x-layout>
+    

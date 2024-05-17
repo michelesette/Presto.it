@@ -11,6 +11,15 @@
                 href="{{ route('article.byCategory', ['category' => $article->category->id]) }}">{{ $article->category->name }}</a>
             <a href="{{ route('article.show', compact('article')) }}"><button class="btn mybtn">Dettaglio</button></a>
         </div>
+
+        {{-- @if ($tags) --}}
+        {{-- <p class=" small  fst-italic mybtn">
+            {{-- @foreach ($tags as $tag) --}}
+                {{-- # {{$tags->name}}
+            {{-- @endforeach --}}
+        {{-- </p> --}}
+        {{-- @endif --}}
+        
     </div>
     <div class="card-footer text-muted d-flex align-items-center justify-content-center mt-2 ">
         <p>Articolo creato il {{ $article->created_at->format('d/m/Y') }}</p>
