@@ -71,20 +71,20 @@ class ArticleController extends Controller
             
         }
 
-        // $tags= explode(',', $request->tags);
-        // foreach ($tags as $i => $tag) {
-        //     $tags[$i] = trim($tag);
-        // }
+         $tags= explode(',', $request->tags);
+         foreach ($tags as $i => $tag) {
+             $tags[$i] = trim($tag);
+         }
 
-        // foreach ($tags as $tag) {
-        //     $newTag = Tag::updateOrCreate(
-        //         ['name' => $tag],
-        //         ['name'=> strtolower($tag)],
-        //     );
-        //     $article->tags()->attach($newTag);
-        // }
+         foreach ($tags as $tag) {
+             $newTag = Tag::updateOrCreate(
+                 ['name' => $tag],
+                 ['name'=> strtolower($tag)],
+             );
+             $article->tags()->attach($newTag);
+         }
 
-        // $article->tags()->attach($request)->tags;
+        
 
         return redirect()->back()->with('message', 'Articolo creato correttamente');
     }
