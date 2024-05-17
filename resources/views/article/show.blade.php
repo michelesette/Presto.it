@@ -26,9 +26,9 @@
                 </div>
             </div>
             
-            <div class="col-12 col-md-4 order-md-last text-black text-center mt-4">
+            <div class="col-12 col-md-4 order-md-last text-black mt-4">
                 <h5 class="card-title p-2">{{ $article->subtitle }}</h5>
-                <p class="card-text">{{ $article->body }}</p>
+                <p class="card-text mt-4">{{ $article->body }}</p>
                 @if ($article->category)
                     <div>
                         <span class="badge text-bg-primary">{{ $article->category->name }}</span>
