@@ -34,6 +34,10 @@
         </div>
     </section>
 
+
+    <!-- sezione  categorie -->
+    <x-category-section :$article/>
+
     <!-- staff -->
     <section>
         
