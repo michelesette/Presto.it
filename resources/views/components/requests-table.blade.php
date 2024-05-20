@@ -17,17 +17,17 @@
               @switch($role)
               @case('amministratore')
                   <a href="{{ route('admin.setAdmin', compact('user')) }}"
-                      class="btn mybtn text-white">Attiva: {{ $role }} </a>
+                      class="btn mybtn">Attiva: {{ $role }} </a>
               @break
 
               @case('revisore')
                   <a href="{{ route('admin.setRevisor', compact('user')) }}"
-                      class="btn mybtn text-white">Attiva: {{ $role }} </a>
+                      class="btn mybtn">Attiva: {{ $role }} </a>
               @break
 
               @case('redattore')
                   <a href="{{ route('admin.setWriter', compact('user')) }}"
-                      class="btn mybtn text-white">Attiva: {{ $role }} </a>
+                      class="btn mybtn">Attiva: {{ $role }} </a>
               @break
           @endswitch
                 {{-- <button type="submit" class=" btn mybtn">Attiva{{$role}}</button> --}}
