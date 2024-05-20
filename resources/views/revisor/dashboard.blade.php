@@ -6,7 +6,7 @@
             <div class="row justify-content-center align-content-center h-100 mt-5">
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
 
-                    <h1 class="text-center text-bg-light p-2 mt-5">Bentornato Revisore</h1>
+                    <h1 class="text-center text-bg-light p-2 mt-5 textOmbre">Bentornato Revisore</h1>
 
                 </div>
             </div>
@@ -18,7 +18,7 @@
   <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">
-            <h2 class=" text-dark ">Articolo da revisionare</h2>
+            <h2 class=" text-dark textOmbre">Articolo da revisionare</h2>
             <x-articles-table :articles="$unrevisionedArticles"/>
         </div>
     </div>

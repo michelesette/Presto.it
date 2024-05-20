@@ -3,7 +3,7 @@
         <div class="container-fluid mt-5 ">
             <div class="row justify-content-center align-content-center h-100 ">
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                    <h1 class="text-center text-bg-light p-2">Lavora con noi</h1>
+                    <h1 class="text-center text-bg-light p-2 textOmbre">Lavora con noi</h1>
                 </div>
             </div>
         </div>

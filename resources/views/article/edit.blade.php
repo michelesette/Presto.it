@@ -3,7 +3,7 @@
     <div class="container-fluid mt-5">
       <div class="row justify-content-center align-content-center h-100 ">
         <div class="col-12 col-md-6 text-bg-light d-flex justify-content-center align-items-center">
-          <h1 class="text-center text-bg-light p-2">MODIFICA ARTICOLO: {{$article->title}}</h1>
+          <h1 class="text-center text-bg-light p-2 textOmbre">MODIFICA ARTICOLO: {{$article->title}}</h1>
         </div>
       </div>
     </div>

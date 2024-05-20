@@ -9,6 +9,7 @@
 
 .cardCustom{
     height: 700px;
+    box-shadow: 10px 15px 20px grey ;
 }
 
 
@@ -40,3 +41,18 @@
   .iconeStaff{
     font-size: xx-large;
   }
+
+  /* sezione categorie */
+  .sectionCategory{
+    background-color: #212529;
+    box-shadow: 10px 15px 20px grey;
+  }
+
+  .titoloCategory{
+    text-shadow: 10px 15px 20px grey;
+  }
+     /* fine sezione categorie */
+
+      .textOmbre{
+        text-shadow: 10px 15px 20px grey;
+         }

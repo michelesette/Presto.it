@@ -1,4 +1,4 @@
-<div class="card cardCustom my-5 shadow " data-aos="fade-up">
+<div class="card cardCustom my-5" data-aos="fade-up">
     <img src="{{ Storage::url($article->img) }}" class="card-img-top imgCastom" alt="...">
     <div class="card-body d-flex flex-column justify-content-between ">
         <div>
