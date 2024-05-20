@@ -4,12 +4,12 @@
             <div class="row">
                 <div class="col-12 colHome d-flex justify-content-center align-content-center flex-column ">
                     @guest
-                        <h1 class="text-dark align-content-center text-center">HOMEPAGE</h1>
-                        <h5 class="text-dark align-content-center text-center">Ecco i nostri ultimi annunci!</h5>
+                        <h1 class="text-dark align-content-center text-center textOmbre">HOMEPAGE</h1>
+                        <h5 class="text-dark align-content-center text-center textOmbre">Ecco i nostri ultimi annunci!</h5>
                     @endguest
                     @auth
-                        <h1 class="text-dark align-content-center text-center">Ciao {{ Auth::user()->name }}!</h1>
-                        <h5 class="text-dark align-content-center text-center">Ecco i nostri ultimi annunci!</h5>
+                        <h1 class="text-dark align-content-center text-center textOmbre">Ciao {{ Auth::user()->name }}!</h1>
+                        <h5 class="text-dark align-content-center text-center textOmbre">Ecco i nostri ultimi annunci!</h5>
                     @endauth
                     {{-- <div>
                         <x-_locale lang="it"/>
