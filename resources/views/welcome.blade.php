@@ -5,17 +5,17 @@
                 <div class="col-12 colHome d-flex justify-content-center align-content-center flex-column ">
                     @guest
                         <h1 class="text-dark align-content-center text-center">HOMEPAGE</h1>
-                        <h5 class="text-dark align-content-center text-center">Dream Team</h5>
+                        <h5 class="text-dark align-content-center text-center">Ecco i nostri ultimi annunci!</h5>
                     @endguest
                     @auth
                         <h1 class="text-dark align-content-center text-center">Ciao {{ Auth::user()->name }}!</h1>
-                        <h5 class="text-dark align-content-center text-center">{{__('ui.allAnnouncements')}}</h5>
+                        <h5 class="text-dark align-content-center text-center">Ecco i nostri ultimi annunci!</h5>
                     @endauth
-                    <div>
+                    {{-- <div>
                         <x-_locale lang="it"/>
                         <x-_locale lang="en"/>
                         <x-_locale lang="es"/>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
