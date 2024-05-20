@@ -61,6 +61,14 @@
               </div>
             </div>
           </div>
+          <div class="mb-3 ">
+            <label for="tags" class="form-label">Tags</label>
+            <input type="text" name="tags" class="form-control d-flex me-3" id="tags" value="{{old('tags')}}">
+            <span class="small fst-italic ">Dividi ogni tag con una virgola</span>
+            @error('tags')
+            <span class="text-danger">{{$message}}</span>
+            @enderror
+        </div>
           <button type="submit" class="btn mybtn mt-3">Salva</button>
         </form>
       </div>

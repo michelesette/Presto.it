@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class AdminController extends Controller
 
         return view('admin.dashboard',compact('adminRequest','revisorRequest','writerRequest'));
     }
+    //tag
 
     public function editTag(Request $request, Tag $tag){
         $request->validate([
@@ -26,24 +28,52 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Tag aggiornato correttamente');
     }
 
+    public function deleteTag(Tag $tag){
+        foreach($tag->articles as $article){
+            $article->tags()->detach($tag);
+        }
+        $tag->delete();
+        return redirect()->back()->with('message','Tag eliminato');
+   }
+
+   //category
+
+   public function editCategory (Request $request, Category $category){
+        $request->validate([
+            'name' => 'required|unique:categories'
+        ]);
+        $category->update([
+            'name' => strtolower($request->name)
+        ]);
+        return redirect()->back()->with('message', 'Categoria aggiornata correttamente');
+    }
+
+    public function deleteCategory(Category $category){
+        $category->delete();
+           return redirect()->back()->with('message','Tag eliminato');
+    }
+
+
+  //admin
+
     public function setAdmin(User $user){
           $user->is_admin = true;
           $user->save();
           
-          return redirect(route('admin.dashboard'))->with('message', 'Hai corettamente reso amministratore 1\'utente scelto');
+          return redirect(route('admin.dashboard'))->with('message', "Hai corettamente reso amministratore l'utente scelto");
     }
 
     public function setRevisor(User $user){
         $user->is_revisor = true;
         $user->save();
         
-        return redirect(route('admin.dashboard'))->with('message', 'Hai corettamente reso revisore 1\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('message', "Hai corettamente reso revisore l'utente scelto");
   }
 
   public function setWriter(User $user){
     $user->is_writer = true;
     $user->save();
     
-    return redirect(route('admin.dashboard'))->with('message', 'Hai corettamente reso redattore 1\'utente scelto');
+    return redirect(route('admin.dashboard'))->with('message', "Hai corettamente reso redattore l'utente scelto");
 }
 }

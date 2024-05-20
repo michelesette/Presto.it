@@ -55,4 +55,17 @@
     </div>
   </div>
 
+
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h2 class="text-dark text-center">Tutte le categorie</h2>
+            <x-metainfo-table 
+                metaType="categorie"
+                :metaInfos="$categories"
+            />
+        </div>
+    </div>
+  </div>
+
 </x-layout>
