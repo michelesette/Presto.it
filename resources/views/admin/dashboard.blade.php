@@ -61,7 +61,7 @@
         <div class="col-12">
             <h2 class="text-dark text-center">Tutte le categorie</h2>
             <x-metainfo-table 
-                metaType="categorie"
+                metaType="categories"
                 :metaInfos="$categories"
             />
         </div>
