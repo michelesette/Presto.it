@@ -1,11 +1,11 @@
 <x-layout title="Staff">
       <!-- Section STAFF-->
   <div id="staff" class="container my-5 p-5 bg-white text-black overflow-hidden">
-    <h1 class="d-flex justify-content-center">STAFF</h1>
-    
+    <h1 class="d-flex justify-content-center textOmbre">STAFF</h1>
+
     <div class="row align-items-center justify-content-center my-3 py-3 mt-5 " data-aos="fade-right" data-aos-delay="1000">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
-        <a  class="text-decoration-none text-reset"><img src="/media/karim.jpg" class="staff img-fluid borde-1" alt=""></a>  
+        <a  class="text-decoration-none text-reset"><img src="/media/karim.jpg" class="staff img-fluid borde-1" alt=""></a>
       </div>
       <div class="col-md-6">
         <div class="card-body">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row align-items-center  justify-content-center my-3 py-3" data-aos="fade-left" data-aos-delay="1200">
       <div class="col-md-6">
         <div class="card-body">
@@ -31,13 +31,13 @@
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="/media/michele.jpg" class="staff img-fluid borde-1" alt=""></a>  
+        <a class="text-decoration-none text-reset"><img src="/media/michele.jpg" class="staff img-fluid borde-1" alt=""></a>
       </div>
     </div>
-    
+
     <div class="row align-items-center justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1400">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="/media/claudia.jpg" class="staff img-fluid borde-1" alt=""></a>  
+        <a class="text-decoration-none text-reset"><img src="/media/claudia.jpg" class="staff img-fluid borde-1" alt=""></a>
       </div>
       <div class="col-md-6">
         <div class="card-body">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row align-items-center justify-content-center my-3 py-3 " data-aos="fade-left" data-aos-delay="1000">
       <div class="col-md-6">
         <div class="card-body">
@@ -61,18 +61,18 @@
             sono: l'espressività ,saper ascoltare, motivare, la praticità, la curiosità e la gentilezza.
             <div class="iconeStaff">
               <a href="https://www.linkedin.com/in/vincenzo-cioffi-fullstack-developer/" class="bi bi-linkedin" target="_blank"></a>
-            </div> 
+            </div>
           </p>
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="/media/vincenzo.jpeg" class="staff img-fluid borde-1" alt=""></a>  
+        <a class="text-decoration-none text-reset"><img src="/media/vincenzo.jpeg" class="staff img-fluid borde-1" alt=""></a>
       </div>
     </div>
-    
+
     <div class="row align-items-center justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1000">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="/media/marianna.jpg" class="staff img-fluid borde-1" alt=""></a>  
+        <a class="text-decoration-none text-reset"><img src="/media/marianna.jpg" class="staff img-fluid borde-1" alt=""></a>
       </div>
       <div class="col-md-6">
         <div class="card-body">

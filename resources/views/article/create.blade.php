@@ -4,7 +4,7 @@
             <div class="row justify-content-center align-content-center h-100 mt-5">
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
 
-                    <h1 class="text-center text-bg-light p-2 mt-5">NUOVO ARTICOLO</h1>
+                    <h1 class="text-center text-bg-light p-2 mt-5 textOmbre">NUOVO ARTICOLO</h1>
 
                 </div>
             </div>

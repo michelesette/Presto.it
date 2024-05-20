@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center align-content-center h-100 ">
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                    <h1 class="text-center text-bg-light p-2">Accedi al tuo Account</h1>
+                    <h1 class="text-center text-bg-light p-2 textOmbre">Accedi al tuo Account</h1>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="mt-3 col-12 d-flex justify-content-center ">
                                 <p>se non sei ancora registrato allora fallo subito:</p>
-                            </div>    
+                            </div>
                                 <div class="d-flex justify-content-center">
                                     <a href="{{ route('register') }}" class="btn mybtn"> Registrati </a>
                                 </div>
