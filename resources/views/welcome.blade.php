@@ -36,7 +36,7 @@
 
     <!-- staff -->
     <section>
-        <h1 class="mt-5 mb-2 text-center text-black ">Lo Staff DreamTeam</h1>
+        
     </section>
 
 <x-lostaff></x-lostaff>
