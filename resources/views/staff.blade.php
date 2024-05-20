@@ -77,9 +77,10 @@
       <div class="col-md-6">
         <div class="card-body">
           <h2 class="tx-1 design-underline">Marianna Conticelli</h2>
-          <p class="font-dosis lead">Artista classe 1990. Fin da bambina sceglie di comunicare attraverso  il disegno.
+          <p class="font-dosis lead">Sono un Full Stack Developer junior, con maggiori competenze sul front-end.
+            Mi piace molto lavorare in team, le mie competenze allenate maggiormente sono : organizzare il lavoro in team e confrontarsi, competenze informatiche, ascoltare e relazionarsi con i clienti.
             <div class="iconeStaff">
-              <a href="https://www.linkedin.com/in/karim-ben-abid-front-end/" class="bi bi-linkedin" target="_blank"></a>
+              <a href="" class="bi bi-linkedin" target="_blank"></a>
             </div>
           </p>
         </div>
