@@ -59,7 +59,7 @@
                   </li>
                   @endif
 
-                  
+            
                   <li>
                     <form action="{{route('logout')}}" method="POST" class="d-flex justify-content-center ">
                       @csrf

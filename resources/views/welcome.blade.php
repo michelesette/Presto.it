@@ -9,8 +9,13 @@
                     @endguest
                     @auth
                         <h1 class="text-dark align-content-center text-center">Ciao {{ Auth::user()->name }}!</h1>
-                        <h5 class="text-dark align-content-center text-center">Benvenuto</h5>
+                        <h5 class="text-dark align-content-center text-center">{{__('ui.allAnnouncements')}}</h5>
                     @endauth
+                    <div>
+                        <x-_locale lang="it"/>
+                        <x-_locale lang="en"/>
+                        <x-_locale lang="es"/>
+                    </div>
                 </div>
             </div>
         </div>

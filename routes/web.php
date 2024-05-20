@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\LanguagesController;
 use App\Http\Controllers\RevisorController;
 
 // HOME
@@ -99,3 +100,6 @@ Route::middleware('writer')->group(function () {
 
 Route::get('/staff', [PublicController::class, 'staff'])
     ->name('staff');
+
+//rotta lingue//
+Route::post('lingua/{lang}', [LanguagesController::class, 'setLanguage'])->name('set_language_locale');
