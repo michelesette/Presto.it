@@ -36,7 +36,7 @@
 
 
     <!-- sezione  categorie -->
-    <x-category-section :$article/>
+    <x-category-section/>
 
     <!-- staff -->
     <section>

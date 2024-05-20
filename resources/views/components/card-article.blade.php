@@ -7,7 +7,7 @@
             @if ($tags)
                 <p class="small fst-italic text-capitalize">
                     @foreach ($article->tags as $tag)
-                       {{$tag->name}}
+                       <span>#</span>{{$tag->name}}
                     @endforeach
                 </p>
             @endif

@@ -1,14 +1,3 @@
-@if ($metaType == 'tags')
-    <td>
-        <form action="{{route('admin.editTag', ['tag' => $metaInfo])}}" method="POST">
-            @csrf
-            @method('PUT')
-            <input type="text" value="{{$metaInfo->name}}" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
-            <button type="submit" class="btn mybtn">Modifica</button>
-        </form>
-    </td>
-@endif
- 
 <table class="table table-striped table-hover">
     <thead class="table-dark">
         <tr>
@@ -46,3 +35,4 @@
         @endforeach
     </tbody>
 </table>
+

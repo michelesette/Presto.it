@@ -47,7 +47,10 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <h2 class="text-dark text-center">Tutti i tags</h2>
-            <!-- richiamo componente table tags -->
+            <x-metainfo-table 
+                metaType="tags"
+                :metaInfos="$tags"
+            />
         </div>
     </div>
   </div>
