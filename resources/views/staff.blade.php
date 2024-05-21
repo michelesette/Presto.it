@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="/media/vincenzo.jpeg" class="staff img-fluid borde-1" alt=""></a>
+        <a class="text-decoration-none text-reset"><img src="/media/vincenzo.jpg" class="staff img-fluid borde-1" alt=""></a>
       </div>
     </div>
 
