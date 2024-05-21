@@ -70,22 +70,7 @@
       </div>
     </div>
 
-    <div class="row align-items-center justify-content-center my-3 py-3" data-aos="fade-right" data-aos-delay="1000">
-      <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">
-        <a class="text-decoration-none text-reset"><img src="/media/marianna.jpg" class="staff img-fluid borde-1" alt=""></a>
-      </div>
-      <div class="col-md-6">
-        <div class="card-body">
-          <h2 class="tx-1 design-underline">Marianna Conticelli</h2>
-          <p class="font-dosis lead">Sono un Full Stack Developer junior, con maggiori competenze sul front-end.
-            Mi piace molto lavorare in team, le mie competenze allenate maggiormente sono : organizzare il lavoro in team e confrontarsi, competenze informatiche, ascoltare e relazionarsi con i clienti.
-            <div class="iconeStaff">
-              <a href="" class="bi bi-linkedin" target="_blank"></a>
-            </div>
-          </p>
-        </div>
-      </div>
-    </div>
+
   </div>
   <!-- fine Section STAFF-->
 </x-layout>
