@@ -29,11 +29,17 @@
             <div class="col-12 col-md-4 order-md-last text-black mt-4">
                 <h4 class="card-title p-2">{{ $article->subtitle }}</h4>
                 <p class="card-text mt-4">{{ $article->body }}</p>
+                @if ($tags)
+                <p class="small fst-italic text-capitalize text-center ">
+                    @foreach ($article->tags as $tag)
+                    <span>#</span>{{$tag->name}}
+                    @endforeach
+                </p>
+                @endif
                 @if ($article->category)
-                    <div class="d-flex justify-content-center ">
-                        <span class="badge text-bg-primary">{{ $article->category->name }}</span>
-                    </div>
-
+                <div class="d-flex justify-content-center ">
+                    <span class="badge text-bg-primary">{{ $article->category->name }}</span>
+                </div>
                 @endif
                 <div class=" d-flex justify-content-center">
                     @if (Auth::user() && Auth::user()->is_writer)
@@ -51,18 +57,18 @@
                     <div class="row">
                         <div class="col-12 d-flex mt-4 justify-content-center">
                             <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn mybtn mx-5 ">Accetta articolo</button>
+                                @csrf
+                                <button type="submit" class="btn mybtn mx-5 ">Accetta articolo</button>
                             </form>
 
                             <form action="{{route('revisor.rejectArticle', $article)}}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn mybtn mx-5 ">Rifiuta articolo</button>
+                                @csrf
+                                <button type="submit" class="btn mybtn mx-5 ">Rifiuta articolo</button>
                             </form>
-                        @endif
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </x-layout>
+</x-layout>
