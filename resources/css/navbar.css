@@ -27,10 +27,12 @@
     transition: .9s;
   }
 
+  @media screen and (min-width: 700px){
   .nav-scrolled {
-    margin: 5vh 15vw;
+    margin: 5vh 16.5vw;
     background-color: black !important;
     backdrop-filter: blur(10px);
     border: 1px solid ;
     border-radius: 10px;
   }
+}

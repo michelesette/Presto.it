@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <div>
+      <div class="d-flex justify-content-center d-md-block">
         <a href="{{route('homepage')}}">
           <img src="/media/logodt3.png" class="logo"  alt="">
         </a>
