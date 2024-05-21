@@ -30,7 +30,7 @@
                 <h4 class="card-title p-2">{{ $article->subtitle }}</h4>
                 <p class="card-text mt-4">{{ $article->body }}</p>
                 @if ($tags)
-                <p class="small fst-italic text-capitalize text-center ">
+                <p class="small fst-italic text-capitalize text-center  ">
                     @foreach ($article->tags as $tag)
                     <span>#</span>{{$tag->name}}
                     @endforeach
