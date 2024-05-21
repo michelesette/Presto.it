@@ -16,6 +16,7 @@ class AdminController extends Controller
 
         return view('admin.dashboard',compact('adminRequest','revisorRequest','writerRequest'));
     }
+
     //tag
 
     public function editTag(Request $request, Tag $tag){
@@ -49,9 +50,27 @@ class AdminController extends Controller
     }
 
     public function deleteCategory(Category $category){
+        
+        $articles = $category->articles;
+
+        foreach ($articles as $article){
+            $article->update([
+                'category_id'=>NULL
+            ]);
+        }
         $category->delete();
-           return redirect()->back()->with('message','Tag eliminato');
+        return redirect()->back()->with('message','Categoria eliminata correttamente');
     }
+
+    public function storeCategory(Request $request)
+    {
+        Category::create([
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect()->back()->with('message', 'Categoria inserita correttamente');
+    }
+
 
 
   //admin
@@ -75,5 +94,7 @@ class AdminController extends Controller
     $user->save();
     
     return redirect(route('admin.dashboard'))->with('message', "Hai corettamente reso redattore l'utente scelto");
-}
+  }
+
+    
 }

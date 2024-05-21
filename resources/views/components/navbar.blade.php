@@ -55,6 +55,9 @@
 
                   @if (Auth::user()->is_writer)
                   <li>
+                    <a class="dropdown-item nav-link  my-3" href="{{route('writer.dashboard')}}"><i class="fa-solid fa-user-tie"></i>Dashboard del Redattore</a>
+                  </li>
+                  <li>
                     <a class="dropdown-item nav-link  my-3" href="{{route('article.create')}}"><i class="bi bi-plus-lg"></i>Articolo</a>
                   </li>
                   @endif

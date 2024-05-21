@@ -6,6 +6,8 @@
             <th scope="col">Articoli collegati</th>
             <th scope="col">Aggiorna</th>
             <th scope="col">Cancella</th>
+
+
         </tr>
     </thead>
     <tbody>
@@ -32,7 +34,7 @@
             </td>
             @endif
 
-            
+
             @if ($metaType == 'categories')
             <td>
                 <form action="{{route('admin.editCategory', ['category'=>$metaInfo])}}" method="POST">

@@ -68,4 +68,19 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-dark text-center">Crea una nuova categoria</h2>
+            <div class="">
+                 <form action="{{ route('admin.storeCategory') }}" method="POST" class="w-50 d-flex m-3">
+                    @csrf
+                    <input type="text" name="name" class="form-control me-2" placeholder="Nuova categoria">
+                    <button type="submit" class="btn mybtn">Inserisci</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
 </x-layout>

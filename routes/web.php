@@ -6,6 +6,7 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\LanguagesController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\WriterController;
 
 // HOME
 Route::get('/', [PublicController::class, 'welcome'])
@@ -28,11 +29,7 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])
     ->name('article.edit')->middleware('auth');
 
-Route::put('/article/update/{article}', [ArticleController::class, 'update'])
-    ->name('article.update')->middleware('auth');
 
-Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'])
-    ->name('article.destroy')->middleware('auth');
 //rotta filtro categorie
 
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])
@@ -74,6 +71,8 @@ Route::middleware('admin')->group(function () {
 
     Route::delete('admin/delete/category/{category}', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
 
+    Route::post('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
+
 });
 
 // rotta revisor
@@ -94,6 +93,14 @@ Route::middleware('writer')->group(function () {
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+
+    Route::get('writer/dashboard', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+
+    Route::put('/article/update/{article}', [ArticleController::class, 'update'])
+    ->name('article.update');
+
+    Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'])
+    ->name('article.destroy');
 });
 
 //rotta staff
