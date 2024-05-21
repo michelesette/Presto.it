@@ -1,9 +1,17 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black transition">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between">
+    <a href="{{route('homepage')}}" class="d-md-none d-block">
+      <img src="/media/logodt3.png" class="logo"  alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="d-flex justify-content-center d-md-block d-none">
+        <a href="{{route('homepage')}}">
+          <img src="/media/logodt3.png" class="logo"  alt="">
+        </a>
+      </div>
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item px-3 ">
           <a class="nav-link" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house"></i> Home</a>
