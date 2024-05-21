@@ -2,7 +2,7 @@
     <header class="hero">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 colHome d-flex justify-content-center align-content-center flex-column ">
+                <div class="col-12 colHome d-flex justify-content-center align-content-center flex-column mt-2">
                     @guest
                         <h1 class="text-dark align-content-center text-center textOmbre">HOMEPAGE</h1>
                         <h5 class="text-dark align-content-center text-center textOmbre">Ecco i nostri ultimi annunci!</h5>

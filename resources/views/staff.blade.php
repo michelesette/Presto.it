@@ -1,7 +1,7 @@
 <x-layout title="Staff">
       <!-- Section STAFF-->
   <div id="staff" class="container my-5 p-5 bg-white text-black overflow-hidden">
-    <h1 class="d-flex justify-content-center textOmbre">STAFF</h1>
+    <h1 class="d-flex justify-content-center textOmbre mt-5">STAFF</h1>
 
     <div class="row align-items-center justify-content-center my-3 py-3 mt-5 " data-aos="fade-right" data-aos-delay="1000">
       <div class="col-md-4 order-1 order-md-0 d-flex justify-content-center">

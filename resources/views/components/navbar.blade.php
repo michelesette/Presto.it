@@ -4,6 +4,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <div>
+        <a href="{{route('homepage')}}">
+          <img src="/media/logodt3.png" class="logo"  alt="">
+        </a>
+      </div>
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item px-3 ">
           <a class="nav-link" aria-current="page" href="{{route('homepage')}}"><i class="fa-solid fa-house"></i> Home</a>
