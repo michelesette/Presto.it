@@ -11,11 +11,7 @@
                         <h1 class="text-dark align-content-center text-center textOmbre">{{__('ui.welcome')}} {{ Auth::user()->name }}</h1>
                         {{-- <h5 class="text-dark align-content-center text-center textOmbre">{{__('ui.allAnnouncements')}}</h5> --}}
                     @endauth
-                    <div>
-                        <x-_locale lang="it"/>
-                        <x-_locale lang="en"/>
-                        <x-_locale lang="es"/>
-                    </div>
+                    
                 </div>
             </div>
         </div>
