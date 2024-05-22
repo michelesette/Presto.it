@@ -57,7 +57,12 @@
 }
 
 
-.logo {
+.logo{
   width: 100px;
   height: 80px;
+}
+
+.logoFooter{
+  width: 150px;
+  height: auto;
 }
