@@ -19,7 +19,7 @@
                 <div class="row justify-content-center p-2 ">
                     @foreach ($articles as $article)
                         <div class="col-12 col-md-4">
-                            <x-card-article :article="$article" :tags="$article->tags" />
+                            <x-card-article :article="$article" :tags="$article->tags" readDuration="{{$article->readDuration()}}"/>
                         </div>
                     @endforeach
                 </div>
