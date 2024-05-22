@@ -29,7 +29,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($articles as $article)
                         <div class="swiper-slide">
-                            <x-card-article :article="$article" :tags="$article->tags"/>
+                            <x-card-article :article="$article" :tags="$article->tags" readDuration="{{$article->readDuration()}}"/>
                         </div>
                         @endforeach
                     </div>

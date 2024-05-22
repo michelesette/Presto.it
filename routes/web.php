@@ -23,7 +23,7 @@ Route::get('/', [PublicController::class, 'welcome'])
 Route::get('/article/index', [ArticleController::class, 'index'])
     ->name('article.index');
 
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])
+Route::get('/article/show/{article:slug}', [ArticleController::class, 'show'])
     ->name('article.show');
 
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])

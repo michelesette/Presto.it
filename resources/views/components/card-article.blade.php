@@ -4,6 +4,7 @@
         <div>
             <h4 class="card-title text-center ">{{ $article->title }}</h4>
             <p class="card-text">{{ $article->subtitle }}</p>
+            <span class="text-muted small fst-italic">Tempo di lettura {{$readDuration}} minuti</span>
             @if ($tags)
                 <p class="small fst-italic text-capitalize">
                     @foreach ($article->tags as $tag)
