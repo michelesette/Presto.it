@@ -8,6 +8,10 @@
             </div>
         </div>
     </header>
+
+    <x-display-errors />
+
+
     <div class="container-fluid mt-5 form-log1 py-3">
         <div class="row justify-content-center align-content-center h-100 ">
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -49,5 +53,4 @@
             </div>
         </div>
     </div>
-    <x-display-errors />
 </x-layout>
