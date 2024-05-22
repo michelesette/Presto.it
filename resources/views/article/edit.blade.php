@@ -35,7 +35,7 @@
 
           <div class="mb-3">
             <label for="body" class="form-label">Corpo dell'articolo</label>
-            <textarea name="body" class="form-control" id="body">{{$article->body}}</textarea>
+            <textarea name="body" cols="30" rows="10" class="form-control" id="body">{{$article->body}}</textarea>
           </div>
           <div class="mb-3 ">
             <label for="img" class="form-label">Immagine attuale:</label>

@@ -29,9 +29,9 @@
                          class="nav-link p-0 text-body-secondary font-dosis">Home</a></li>
                  <li class="nav-item mb-2"><a href="/staff"
                          class="nav-link p-0 text-body-secondary font-dosis">STAFF</a></li>
-                 <li class="nav-item mb-2"><a href="#Dove-trovarci"
+                 <li class="nav-item mb-2"><a href="/staff"
                          class="nav-link p-0 text-body-secondary font-dosis">Informazioni</a></li>
-                 <li class="nav-item mb-2"><a href="#contatti"
+                 <li class="nav-item mb-2"><a href="/staff"
                          class="nav-link p-0 text-body-secondary font-dosis">Contatti</a></li>
              </ul>
          </div>
