@@ -28,7 +28,7 @@ return [
    //navbar//
    'home'=>'home',
    'staff'=>'staff', 
-   'articles'=>'Articoli',
+   'Articles'=>'Articoli',
    'lingua'=>'lingua',
    'lavora con noi'=>'lavora con noi',
 ];
