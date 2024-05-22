@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
@@ -60,7 +61,8 @@ class ArticleController extends Controller
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body'=> $request->body,
-            'category_id'=> $request->category_id
+            'category_id'=> $request->category_id,
+            'slug'=>Str::slug($request->title),
         ]);
 
 
@@ -129,7 +131,9 @@ class ArticleController extends Controller
              'subtitle' => $request->subtitle,
              'body' => $request->body,
              'category_id'=> $request->category_id,
-             'img'=> $img
+             'img'=> $img,
+            'slug'=>Str::slug($request->title)
+
          ]);
         //  $article->category()->sync([$request->categories]);
          return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
