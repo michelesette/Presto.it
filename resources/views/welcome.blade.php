@@ -11,11 +11,7 @@
                         <h1 class="text-dark align-content-center text-center textOmbre">Ciao {{ Auth::user()->name }}!</h1>
                         <h5 class="text-dark align-content-center text-center textOmbre">Ecco i nostri ultimi annunci!</h5>
                     @endauth
-                    <div>
-                        <x-_locale lang="it"/>
-                        <x-_locale lang="en"/>
-                        <x-_locale lang="es"/>
-                    </div>
+                    
                 </div>
             </div>
         </div>
