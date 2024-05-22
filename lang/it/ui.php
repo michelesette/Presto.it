@@ -13,5 +13,21 @@ return [
    'Scientifico'=>'Scientifico',
    'Trend'=>'Trend',
    'Formazione'=>'Formazione',
-   'Motori'=>'Motori'
+   'Motori'=>'Motori',
+   //footer//
+   'home'=>'home',
+   'staff'=>'staff', 
+   'Privacy policy'=>'Privacy policy',
+   'Use of terms'=>'Termini e condizioni',
+   'Copyright'=>'Copyright',
+   'info'=>'informazioni',
+   'contact'=>'Contatti',
+   'session'=>'Sezioni',
+   'seguici'=>'Seguici',
+   //navbar//
+   'home'=>'home',
+   'staff'=>'staff', 
+   'articles'=>'Articoli',
+   'lingua'=>'lingua',
+   'lavora con noi'=>'lavora con noi',
 ];

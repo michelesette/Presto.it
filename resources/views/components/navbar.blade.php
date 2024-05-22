@@ -16,22 +16,21 @@
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item px-3 ">
                     <a class="nav-link" aria-current="page" href="{{ route('homepage') }}"><i
-                            class="fa-solid fa-house"></i> Home</a>
+                            class="fa-solid fa-house"></i>{{__('ui.home')}}</a>
                 </li>
                 <li class="nav-item px-3 ">
-                    <a class="nav-link" href="{{ route('article.index') }}"><i class="fa-solid fa-newspaper"></i>
-                        Articoli</a>
+                    <a class="nav-link" href="{{ route('article.index') }}"><i class="fa-solid fa-newspaper"></i>{{__('ui.Articles')}}</a>
                 </li>
                 <li class="nav-item px-3 ">
-                    <a class="nav-link" href="{{ route('careers') }}"><i class="bi bi-pc-display"></i>Lavora con noi</a>
+                    <a class="nav-link" href="{{ route('careers') }}"><i class="bi bi-pc-display"></i>{{__('ui.lavora con noi')}}</a>
                 </li>
                 <li class="nav-item px-3 ">
-                    <a class="nav-link" href="{{ route('staff') }}"><i class="bi bi-person-vcard"></i>Staff</a>
+                    <a class="nav-link" href="{{ route('staff') }}"><i class="bi bi-person-vcard"></i>{{__('ui.staff')}}</a>
                 </li>
 
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                      <button class="btn dropdown-toggle nav-link mx-2 " data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-globe2"></i>Lingue</button>
+                      <button class="btn dropdown-toggle nav-link mx-2 " data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-globe2"></i>{{__('ui.lingua')}}</button>
                         <ul class="dropdown-menu bg-black mt-2 text-center ">
                             <li class="nav-item px-3 ">
                                 <x-_locale lang="it" />

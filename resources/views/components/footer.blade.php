@@ -23,33 +23,31 @@
          </div>
 
          <div class="col-12 mb-3 text-center">
-             <h5 class="tx-1">Sezioni</h5>
+             <h5 class="tx-1">{{__('ui.session')}}</h5>
              <ul class="nav flex-column">
                  <li class="nav-item mb-2"><a href="{{ route('homepage') }}"
-                         class="nav-link p-0 text-body-secondary font-dosis">Home</a></li>
+                         class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.home')}}</a></li>
                  <li class="nav-item mb-2"><a href="/staff"
-                         class="nav-link p-0 text-body-secondary font-dosis">STAFF</a></li>
+                         class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.staff')}}</a></li>
                  <li class="nav-item mb-2"><a href="/staff"
-                         class="nav-link p-0 text-body-secondary font-dosis">Informazioni</a></li>
+                         class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.info')}}</a></li>
                  <li class="nav-item mb-2"><a href="/staff"
-                         class="nav-link p-0 text-body-secondary font-dosis">Contatti</a></li>
+                         class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.contact')}}</a></li>
              </ul>
          </div>
 
          <div class="col-12 mb-3 text-center">
-             <h5 class="tx-1">Informazioni</h5>
+             <h5 class="tx-1">{{__('ui.info')}}</h5>
              <ul class="nav flex-column">
-                 <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary font-dosis">Privacy
-                         policy</a></li>
-                 <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary font-dosis">Use of
-                         terms</a></li>
+                 <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.Privacy policy')}}</a></li>
+                 <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.Use of terms')}}</a></li>
                  <li class="nav-item mb-2"><a href=""
-                         class="nav-link p-0 text-body-secondary font-dosis">Copyright</a></li>
+                         class="nav-link p-0 text-body-secondary font-dosis">{{__('ui.Copyright')}}</a></li>
              </ul>
          </div>
 
          <div class="col-12 mb-3 text-center">
-             <h5 class="tx-1">Seguici</h5>
+             <h5 class="tx-1">{{__('ui.seguici')}}</h5>
              <ul class="nav flex-column">
                  <li class="nav-item mb-2 display-5"><a href="" target="_blank"
                          class="nav-link p-0 text-body-secondary font-dosis">
