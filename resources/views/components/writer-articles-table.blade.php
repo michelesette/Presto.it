@@ -26,7 +26,7 @@
             <td>
                 <a href="{{route('article.show', compact('article'))}}" class="btn mybtn">Leggi l'articolo</a>
                 <a href="{{route('article.edit', compact('article'))}}" class="btn mybtn">Modifica l'articolo</a>
-                <form action="" method="POST" class=" d-inline ">
+                <form action="{{route('article.destroy',$article)}}" method="POST" class=" d-inline ">
                     @csrf
                     <button type="submit" class="btn mybtn">Elimina articolo</button>
                 </form>

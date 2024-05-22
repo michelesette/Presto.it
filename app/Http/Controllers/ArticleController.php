@@ -57,7 +57,7 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
-        //  dd($request->all());
+         dd($request->all());
 
         $article = Auth::user()->articles()->create([
             'title' => $request->title,
@@ -143,11 +143,23 @@ class ArticleController extends Controller
         return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
     }
 
+
+    public function destroy(Article $article)
+    {
+        foreach($article->tags as $tag) {
+            $article->tags()->detach($tag);
+        }
+        Storage::delete($article->img);
+        $article->delete();
+        return redirect(route('article.index'))->with('message','Articolo cancellato con successo');
+    }
+
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Article $article)
+    public function delete(Article $article)
     {
+
         $article->delete();
         Storage::delete($article->img);
 
