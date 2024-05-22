@@ -6,7 +6,7 @@ return [
    'Allcategory'=>' Our Categories',
    'Attualità'=>'News', 
    'Musica'=>'Music',
-   'E-sports'=>'E-sports',
+   'e-sports'=>'E-sports',
    'sports'=>'Sports',
    'Cronaca'=>'Chronicle',
    'Satira'=>'Satire',
