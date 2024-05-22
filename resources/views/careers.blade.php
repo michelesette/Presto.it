@@ -11,7 +11,7 @@
 
     <div class="container mt-5">
         <div class="row text-center justify-content-center text-black">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
                 <h2>Lavora come amministratore</h2>
                 <p>Lavorare come amministratore di un giornale rappresenta un ruolo di grande responsabilità e
                     importanza all'interno di una testata giornalistica. L'amministratore gestisce gli aspetti
@@ -28,11 +28,11 @@
                 </p>
             </div>
             <x-display-errors />
-            <form action="{{ route('careers.submit') }}" method="POST" class="p-5">
+            <form action="{{ route('careers.submit') }}" method="POST" class="p-3 shadow rounded-3 bg-body-secondary mb-4 text-white">
                 @csrf
                 <div class="mb-3">
                     <label for="role" class="form-label">
-                        Per quale ruolo ti stai candidando?
+                        <h4>Per quale ruolo ti stai candidando?</h4>
                     </label>
                     <select name="role" id="role" class="form-label">
                         <option value="">scegli qui</option>
