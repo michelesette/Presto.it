@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -22,31 +23,32 @@ class ArticleController extends Controller
         return view('article.index', compact('articles'));
     }
 
-    public function articleSearch(Request $request){
-        $query = $request -> input('query');
+    public function articleSearch(Request $request)
+    {
+        $query = $request->input('query');
         $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
         return view('article.search-index', compact('articles', 'query'));
     }
 
 
-        public function byCategory(Category $category)
+    public function byCategory(Category $category)
     {
         $articles = $category->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
-        return view('article.byCategory', compact('category','articles'));
+        return view('article.byCategory', compact('category', 'articles'));
     }
 
     public function byUser(User $user)
     {
         $articles = $user->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
-        return view('article.byUser', compact('user','articles'));
+        return view('article.byUser', compact('user', 'articles'));
     }
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-       $tags= Tag::all();
-       $categories = Category::all();
+        $tags = Tag::all();
+        $categories = Category::all();
         return view('article.create', compact('categories', 'tags'));
     }
 
@@ -57,35 +59,35 @@ class ArticleController extends Controller
     {
         //  dd($request->all());
 
-        $article= Auth::user()->articles()->create([
+        $article = Auth::user()->articles()->create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
-            'body'=> $request->body,
-            'category_id'=> $request->category_id,
-            'slug'=>Str::slug($request->title),
+            'body' => $request->body,
+            'category_id' => $request->category_id,
+            'slug' => Str::slug($request->title),
         ]);
 
 
-        if($request->file('img')){
+        if ($request->file('img')) {
 
-            $article->img=$request->file('img')->store('public/img');
-            $article->save();  
+            $article->img = $request->file('img')->store('public/img');
+            $article->save();
         }
 
-         $tags= explode(',', $request->tags);
+        $tags = explode(',', $request->tags);
 
-         foreach ($tags as $i => $tag) {
-             $tags[$i] = trim($tag);
-         }
+        foreach ($tags as $i => $tag) {
+            $tags[$i] = trim($tag);
+        }
 
-         foreach ($tags as $tag) {
-             $newTag = Tag::updateOrCreate([
+        foreach ($tags as $tag) {
+            $newTag = Tag::updateOrCreate([
                 'name' => strtolower($tag)
-             ]);
-             $article->tags()->attach($newTag);
-         }
+            ]);
+            $article->tags()->attach($newTag);
+        }
 
-    
+
         return redirect()->back()->with('message', 'Articolo creato correttamente');
     }
 
@@ -103,9 +105,9 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
 
-        $tags= Tag::all();
+        $tags = Tag::all();
 
-         $categories = Category::all();
+        $categories = Category::all();
 
         return view('article.edit', compact('article', 'categories', 'tags'));
     }
@@ -115,28 +117,30 @@ class ArticleController extends Controller
      */
     public function update(ArticleRequest $request, Article $article)
     {
-        if($request->file('img')){
+        if ($request->file('img')) {
+            
+            Storage::delete($article->img);
 
-            $img= $request->file('img')
-                 ->store('public/img');
+            $img = $request->file('img')
+                ->store('public/img');
+        } else {
 
-         } else {
-
-             $img = $article->img;
-         }
+            $img = $article->img;
+        }
 
 
-         $article->update([
-             'title' => $request->title,
-             'subtitle' => $request->subtitle,
-             'body' => $request->body,
-             'category_id'=> $request->category_id,
-             'img'=> $img,
-            'slug'=>Str::slug($request->title)
+        $article->update([
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'category_id' => $request->category_id,
+            'img' => $img,
+            'slug' => Str::slug($request->title),
+            'is_accepted' => null
 
-         ]);
+        ]);
         //  $article->category()->sync([$request->categories]);
-         return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
+        return redirect(route('article.index'))->with('message', 'Articolo modificato con successo!');
     }
 
     /**
@@ -145,9 +149,8 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         $article->delete();
+        Storage::delete($article->img);
 
         return redirect(route('article.index'))->with('message', 'Articolo eliminato con successo!');
     }
 }
-
-
