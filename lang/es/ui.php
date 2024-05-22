@@ -2,7 +2,7 @@
 
 return [
    'allAnnouncements'=>"eccos los nostros annuncios!",
-   
+   'welcome'=>'Bienvenido',
    'Allcategory'=>'Nuestras Categorías',
    'Attualità'=>'Noticia',
    'Musica'=>'Música',

@@ -2,7 +2,7 @@
 
 return [
    'allAnnouncements'=>"ecco i nostri ultimi annunci!",
-   'welcome'=> 'benvenuto',
+   'welcome'=> 'Benvenuto',
    'Allcategory'=> 'Tutte le categorie',
    'Attualità'=>'Attualità', 
    'Musica'=>'Musica',

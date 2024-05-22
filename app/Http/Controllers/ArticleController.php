@@ -57,7 +57,7 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
-         dd($request->all());
+        //  dd($request->all());
 
         $article = Auth::user()->articles()->create([
             'title' => $request->title,
