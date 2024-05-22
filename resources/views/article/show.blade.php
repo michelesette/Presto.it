@@ -2,8 +2,8 @@
     <header class="header pt-1 articleCont">
         <div class="container-fluid mt-5 py-5 px-lg-5 mb-lg-5 rounded-3">
             <div class="row justify-content-center align-content-center">
-                <div class="col-12 text-bg-light  d-flex justify-content-center align-items-center">
-                    <h1 class="text-center textOmbre">{{ $article->category->name}}</h1>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <h1 class="text-center textOmbre mt-5 ">{{ $article->category->name}}</h1>
                 </div>
             </div>
         </div>
