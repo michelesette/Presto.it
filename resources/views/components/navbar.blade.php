@@ -118,7 +118,7 @@
                 @endauth
             </ul>
             <form class="d-flex" method="GET" action="{{ route('article.search') }}">
-                <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search"
+                <input class="form-control me-2 w-75 " type="search" placeholder="Cosa stai cercando?" aria-label="Search"
                     name="query">
                 <button class="btn mybtn" type="submit">Cerca</button>
             </form>
